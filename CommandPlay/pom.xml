@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gumjoe</groupId>
-    <artifactId>TeddyAlive</artifactId>
+    <artifactId>TeddyAliveCommandPlay</artifactId>
     <packaging>jar</packaging>
     <version>0.1-ALPHA-SNAPSHOT</version>
 
-    <name>TeddyAlive</name>
+    <name>TeddyAliveCommandPlay</name>
     <description></description>
 
     <properties>
