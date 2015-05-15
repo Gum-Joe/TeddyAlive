@@ -1,13 +1,13 @@
-package com.gumjoe.teddyalive;
+package com.gumjoe.teddyalivesetup;
 
 /**
  * Hello world!
  *
  */
-public class teddyalive 
+public class setup 
 {
     public static void main( String[] args ) throws exception
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "Starting setup of TeddyAlive" );
     }
 }
