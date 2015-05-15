@@ -4,16 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gumjoe</groupId>
-    <artifactId>TeddyAliveParent</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>TeddyAlive</artifactId>
+    <packaging>jar</packaging>
     <version>0.1-ALPHA-SNAPSHOT</version>
 
     <name>TeddyAlive</name>
     <description></description>
-	<modules>
-		<module>CommandStop</module>
-		<module>CommandPlay</module>
-	</modules>
 
     <properties>
         <build.number>unknown</build.number>
