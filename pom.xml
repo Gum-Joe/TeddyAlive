@@ -10,6 +10,9 @@
 
     <name>TeddyAlive</name>
     <description></description>
+	<modules>
+		<module>CommandStop</module>
+	</modules>
 
     <properties>
         <build.number>unknown</build.number>
