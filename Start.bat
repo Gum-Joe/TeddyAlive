@@ -1,0 +1,1 @@
+echo "Starting..." && echo "Loading code" && cd "src/main/java/com/gumjoe/mssk" && code . && cd ../../../../../.. && mvn clean install

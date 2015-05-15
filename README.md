@@ -1,2 +1,2 @@
-# TeddyAlive
-ALPHA
+# MSSKJAR
+MinecraftServerStarterKitJars

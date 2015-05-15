@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gumjoe</groupId>
-    <artifactId>TeddyAlive</artifactId>
+    <artifactId>mssk</artifactId>
     <packaging>jar</packaging>
     <version>0.1-ALPHA-SNAPSHOT</version>
 
-    <name>TeddyAlive</name>
+    <name>mssk</name>
     <description></description>
 
     <properties>
@@ -98,7 +98,7 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Main-Class>com.gumjoe.teddyalive.teddyalive</Main-Class>
+                            <Main-Class>com.gumjoe.mssk</Main-Class>
                             <Implementation-Version>${describe}</Implementation-Version>
                         </manifestEntries>
                     </archive>
