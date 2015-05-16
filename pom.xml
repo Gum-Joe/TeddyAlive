@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
     <version>0.1-ALPHA-SNAPSHOT</version>
 
-    <name>ParentTeddyAlive</name>
+    <name>TeddyAliveCommandParent</name>
     	<url>http://ess3.net/</url>
 
 	<licenses>
@@ -57,7 +57,7 @@
 	</modules>
 
     <properties>
-        <build.number>unknown</build.number>
+        <build.number>10</build.number>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
