@@ -7,6 +7,10 @@
     <artifactId>TeddyAliveCommandPlay</artifactId>
     <packaging>jar</packaging>
     <version>0.1-ALPHA-SNAPSHOT</version>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/Commands
     <parent>
             <groupId>com.gumjoe</groupId>
             <artifactId>TeddyAliveParent</artifactId>
@@ -14,6 +18,13 @@
         </parent>
     
 <name>TeddyAlivePlay</name>
+<<<<<<< HEAD
+=======
+=======
+
+    <name>TeddyAliveCommandPlay</name>
+>>>>>>> origin/Commands
+>>>>>>> origin/Commands
     <description></description>
 
     <properties>
