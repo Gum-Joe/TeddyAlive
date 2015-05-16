@@ -77,11 +77,10 @@ public class teddyalive
         if (Command == "Stop") {
           ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandStop.jar");
           Process CSt = pb.start();
-        }else{
+        } else {
             System.out.print("InvalidCommand");
             System.out.print("Please type a valid command");
         }
             
         }
     }
-}
