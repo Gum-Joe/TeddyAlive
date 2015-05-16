@@ -1,4 +1,4 @@
-package com.gumjoe.teddyalive;
+package com.gumjoe.teddyalivesetup;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Predicate;
@@ -60,10 +60,15 @@ import org.eclipse.jgit.revwalk.RevCommit;
  * Hello world!
  *
  */
-public class teddyalive 
+public class teddyalivesetup 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws Exception
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "Hello, Welcome to Teddy Setup v0.1 ALPHA" );
+        System.out.println( "Starting to download TeddyAlive" );
+        ProcessBuilder clone = new ProcessBuilder("git", "clone", "https://github.com/Gum-Joe/TeddyAlive.git", "./bin");
+        ProcessBuilder clonetwo = new ProcessBuilder("git", "clone", "https://github.com/Gum-Joe/TeddyAlive.git", "./sdk");
+        Process p = clone.start();
+        Process p = clonetwo.start();
     }
 }

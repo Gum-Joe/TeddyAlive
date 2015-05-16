@@ -98,7 +98,7 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Main-Class>com.gumjoe.teddyalive.teddyalive</Main-Class>
+                            <Main-Class>com.gumjoe.teddyalivesetup.teddyalivesetup</Main-Class>
                             <Implementation-Version>${describe}</Implementation-Version>
                         </manifestEntries>
                     </archive>

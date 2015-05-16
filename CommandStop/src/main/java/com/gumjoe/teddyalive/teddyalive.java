@@ -1,4 +1,4 @@
-package com.gumjoe.teddyalive;
+package com.gumjoe.teddyalivesetup;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Predicate;
@@ -62,7 +62,7 @@ import org.eclipse.jgit.revwalk.RevCommit;
  */
 public class teddyalive 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws Exception
     {
         System.out.println( "Hello World!" );
     }
