@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gumjoe</groupId>
-    <artifactId>TeddyAliveCommandParent</artifactId>
+    <artifactId>TeddyAliveParent</artifactId>
     <packaging>pom</packaging>
     <version>0.1-ALPHA-SNAPSHOT</version>
 
@@ -47,13 +47,10 @@
 			<url>http://repo.ess3.net/content/repositories/essrel</url>
 		</repository>
 	</distributionManagement>
-<description>CommandBuilder</description>
+<description></description>
 	<modules>
-		<module>TeddyAlive</module>
-		<module>Setup</module>
 		<module>CommandStop</module>
 		<module>CommandPlay</module>
-		<module>CommandHelp</module>
 	</modules>
 
     <properties>
