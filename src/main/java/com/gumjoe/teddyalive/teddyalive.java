@@ -70,17 +70,27 @@ public class teddyalive
         System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" );
         ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
         Process p = pb.start();
+        
         System.out.println( "Hello! To continue, just type you command" );
         Scanner userInputScanner = new Scanner(System.in);
-        System.out.print("\nEnter it to continue? ");
+        System.out.print("\nEnter it to continue ");
         String Command = userInputScanner.nextLine();
-        if (Command == "Stop") {
+        if (Command == "Stop", "stop") {
           ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandStop.jar");
           Process CSt = pb.start();
         } else {
-            System.out.print("InvalidCommand");
-            System.out.print("Please type a valid command");
+            System.err.println("InvalidCommand");
+            System.err.println("");
+            System.err.println("Please type a valid command");
+            
         }
+        if (Command == "Help", "?") {
+          ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandStop.jar");
+          Process CSt = pb.start();
+        } else {
+            System.err.println("InvalidCommand");
+            System.err.println("");
+            System.err.println("Please type a valid command");
             
         }
     }
