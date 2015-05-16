@@ -45,6 +45,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
+import java.util.*;
 
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
@@ -64,6 +65,23 @@ public class teddyalive
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "Welcome to TeddyAlive" );
+        System.out.println( "Downloading/Updateing Files" )
+        System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" )
+        ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
+        Process p = pb.start();
+        System.out.println( "Hello! To continue, just type you command" );
+        Scanner userInputScanner = new Scanner(System.in);
+        System.out.print("\nEnter it to continue? ");
+        String Command = userInputScanner.nextLine();
+        if (Command == "Stop") {
+          ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandStop.jar");
+          Process CSt = pb.start();
+        }else{
+            System.out.print("InvalidCommand");
+            System.out.print("Please type a valid command");
+        }
+            
+        }
     }
 }
