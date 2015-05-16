@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gumjoe</groupId>
+<<<<<<< HEAD
     <artifactId>TeddyAliveStop</artifactId>
     <packaging>jar</packaging>
     <version>0.1-ALPHA-SNAPSHOT</version>
@@ -13,6 +14,13 @@
             <version>0.1-ALPHA-SNAPSHOT</version>
         </parent>
     <name>TeddyAliveStop</name>
+=======
+    <artifactId>TeddyAliveCommandStop</artifactId>
+    <packaging>jar</packaging>
+    <version>0.1-ALPHA-SNAPSHOT</version>
+
+    <name>TeddyAliveCommandStop</name>
+>>>>>>> origin/Commands
     <description></description>
 
     <properties>
