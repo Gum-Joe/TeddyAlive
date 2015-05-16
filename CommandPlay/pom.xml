@@ -9,11 +9,11 @@
     <version>0.1-ALPHA-SNAPSHOT</version>
     <parent>
             <groupId>com.gumjoe</groupId>
-            <artifactId>TeddyAliveParent</artifactId>
+            <artifactId>TeddyAliveCommandParent</artifactId>
             <version>0.1-ALPHA-SNAPSHOT</version>
         </parent>
     
-<name>TeddyAlivePlay</name>
+<name>TeddyAliveCommandPlay</name>
     <description></description>
 
     <properties>
