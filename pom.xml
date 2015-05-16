@@ -49,6 +49,8 @@
 	</distributionManagement>
 <description>CommandBuilder</description>
 	<modules>
+		<module>TeddyAlive</module>
+		<module>Setup</module>
 		<module>CommandStop</module>
 		<module>CommandPlay</module>
 		<module>CommandHelp</module>
