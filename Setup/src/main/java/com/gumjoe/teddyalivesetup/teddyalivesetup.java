@@ -66,9 +66,9 @@ public class teddyalivesetup
     {
         System.out.println( "Hello, Welcome to Teddy Setup v0.1 ALPHA" );
         System.out.println( "Starting to download TeddyAlive" );
-        ProcessBuilder clone = new ProcessBuilder("git", "clone", "https://github.com/Gum-Joe/TeddyAlive.git", "-b clone", "./bin");
-        ProcessBuilder clonetwo = new ProcessBuilder("git", "clone", "https://github.com/Gum-Joe/TeddyAlive.git", "./sdk");
-        Process clone = clone.start();
-        Process clonetwo = clonetwo.start();
+        ProcessBuilder cloneTeddy = new ProcessBuilder("git", "clone", "https://github.com/Gum-Joe/TeddyAlive.git", "-b clone", "./bin");
+        ProcessBuilder cloneTeddytwo = new ProcessBuilder("git", "clone", "https://github.com/Gum-Joe/TeddyAlive.git", "./sdk");
+        Process cloneTeddy = clone.start();
+        Process cloneTeddytwo = clonetwo.start();
     }
 }
