@@ -66,8 +66,8 @@ public class teddyalive
     public static void main( String[] args )
     {
         System.out.println( "Welcome to TeddyAlive" );
-        System.out.println( "Downloading/Updateing Files" )
-        System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" )
+        System.out.println( "Downloading/Updateing Files" );
+        System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" );
         ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
         Process p = pb.start();
         System.out.println( "Hello! To continue, just type you command" );
