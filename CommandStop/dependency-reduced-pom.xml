@@ -85,7 +85,7 @@
     </dependency>
   </dependencies>
   <properties>
-    <build.number>unknown</build.number>
+    <build.number>10</build.number>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 </project>
