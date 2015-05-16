@@ -98,23 +98,24 @@ public class teddyalivesetup
          
          System.out.println("Getting more files");
         
+        String o = null;
         try {
             
-            Process clone = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git ./sdk_commandbuilder");
+            Process clonetwo = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git ./sdk_commandbuilder");
              
             BufferedReader stdInput = new BufferedReader(new
-                 InputStreamReader(clone.getInputStream()));
+                 InputStreamReader(clonetwo.getInputStream()));
  
             BufferedReader stdError = new BufferedReader(new
-                 InputStreamReader(clone.getErrorStream()));
+                 InputStreamReader(clonetwo.getErrorStream()));
  
             // read the output from the command
-            while ((s = stdInput.readLine()) != null) {
+            while ((o = stdInput.readLine()) != null) {
                 System.out.println(s);
             }
              
             // read any errors from the attempted command
-            while ((s = stdError.readLine()) != null) {
+            while ((o = stdError.readLine()) != null) {
                 System.out.println(s);
             }
              
@@ -127,23 +128,24 @@ public class teddyalivesetup
         }
         //runing
         System.out.println("Running...");
+        String runs = null;
         try {
             
-            Process clone = Runtime.getRuntime().exec("java -jar ./bin/TeddyAlive.jar");
+            Process run = Runtime.getRuntime().exec("java -jar ./bin/TeddyAlive.jar");
              
             BufferedReader stdInput = new BufferedReader(new
-                 InputStreamReader(clone.getInputStream()));
+                 InputStreamReader(run.getInputStream()));
  
             BufferedReader stdError = new BufferedReader(new
-                 InputStreamReader(clone.getErrorStream()));
+                 InputStreamReader(run.getErrorStream()));
  
             // read the output from the command
-            while ((s = stdInput.readLine()) != null) {
+            while ((runs = stdInput.readLine()) != null) {
                 System.out.println(s);
             }
              
             // read any errors from the attempted command
-            while ((s = stdError.readLine()) != null) {
+            while ((runs = stdError.readLine()) != null) {
                 System.out.println(s);
             }
              
