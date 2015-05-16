@@ -75,16 +75,16 @@ public class teddyalive
         Scanner userInputScanner = new Scanner(System.in);
         System.out.print("\nEnter it to continue ");
         String Command = userInputScanner.nextLine();
-        if (Command == "Stop", "stop") {
+        if (Command == "Stop") {
           ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandStop.jar");
           Process CSt = pb.start();
-        } else {
+        }else{
             System.err.println("InvalidCommand");
             System.err.println("");
             System.err.println("Please type a valid command");
             
         }
-        if (Command == "Help", "?") {
+        if (Command == "Help") {
           ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandStop.jar");
           Process CSt = pb.start();
         } else {
@@ -94,3 +94,4 @@ public class teddyalive
             
         }
     }
+}
