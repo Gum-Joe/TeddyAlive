@@ -76,7 +76,7 @@ public class teddyalive
         System.out.print("\nEnter it to continue ");
         String Command = userInputScanner.nextLine();
         if (Command == "Stop") {
-          ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandStop.jar");
+          ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/Commands/CommandStop.jar");
           Process CSt = pb.start();
         }else{
             System.err.println("InvalidCommand");
