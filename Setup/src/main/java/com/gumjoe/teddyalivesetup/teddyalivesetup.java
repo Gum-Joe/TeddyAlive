@@ -67,11 +67,10 @@ public class teddyalivesetup
         System.out.println( "Hello, Welcome to Teddy Setup v0.1 ALPHA" );
         System.out.println( "Starting to download TeddyAlive" );
         String s = null;
-			try {
-             
-        // run the Unix "ps -ef" command
-            // using the Runtime exec method:
-            Process clone = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone");
+			
+            try {
+            
+            Process clone = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone ./bin");
              
             BufferedReader stdInput = new BufferedReader(new
                  InputStreamReader(clone.getInputStream()));
@@ -96,5 +95,65 @@ public class teddyalivesetup
             e.printStackTrace();
             System.exit(-1);
         }
+         
+         System.out.println("Getting more files");
+        
+        try {
+            
+            Process clone = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git ./sdk_commandbuilder");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(clone.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(clone.getErrorStream()));
+ 
+            // read the output from the command
+            while ((s = stdInput.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            // read any errors from the attempted command
+            while ((s = stdError.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            System.exit(0);
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
+        //runing
+        System.out.println("Running...");
+        try {
+            
+            Process clone = Runtime.getRuntime().exec("java -jar ./bin/TeddyAlive.jar");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(clone.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(clone.getErrorStream()));
+ 
+            // read the output from the command
+            while ((s = stdInput.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            // read any errors from the attempted command
+            while ((s = stdError.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            System.exit(0);
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
+        
     }
 }
