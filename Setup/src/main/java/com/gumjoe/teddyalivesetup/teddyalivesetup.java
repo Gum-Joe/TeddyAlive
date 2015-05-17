@@ -69,7 +69,7 @@ public class teddyalivesetup
         System.out.println( "Starting to download TeddyAlive" );
         //run
         // build my command as a list of strings
-String command = "git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone ./bin"
+String command = "git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone ./bin";
  
 // execute my command
 SystemCommandExecutor commandExecutor = new SystemCommandExecutor(command);
