@@ -74,8 +74,8 @@ public class teddyalive
         System.out.println( "Hello! To continue, just type you command" );
         Scanner userInputScanner = new Scanner(System.in);
         System.out.print("\nEnter it to continue... ");
-        Process c = userInputScanner.nextLine();
-        c.call();
+        String Command = userInputScanner.nextLine();
+        Process process;
         if (Command == "Stop") {
           System.out.println("Stopping ");
           System.exit(1);
@@ -84,7 +84,6 @@ public class teddyalive
             System.err.println("");
             System.err.println(" Please type a valid command ");
             //re run
-
         }
         if (Command == "Help") {
           ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandStop.jar");
