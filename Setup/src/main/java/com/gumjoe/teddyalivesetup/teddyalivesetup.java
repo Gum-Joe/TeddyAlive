@@ -69,6 +69,7 @@ public class teddyalivesetup
         System.out.println( "Starting to download TeddyAlive" );
         String s = null;
 			
+           //first
             try {
             
             Process s = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone ./bin");
@@ -98,25 +99,26 @@ public class teddyalivesetup
         }
          
          System.out.println("Getting more files");
+        //sec
+        String clonetwoout = null;
         
-        String clonetwo = null;
         try {
             
             Process clonetwo = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git ./sdk_commandbuilder");
              
             BufferedReader stdInput = new BufferedReader(new
-                 InputStreamReader(clonetwo.getInputStream()));
+                 InputStreamReader(clonetwoout.getInputStream()));
  
             BufferedReader stdError = new BufferedReader(new
-                 InputStreamReader(clonetwo.getErrorStream()));
+                 InputStreamReader(clonetwoout.getErrorStream()));
             // read the output from the command
-            while ((s = stdInput.readLine()) != null) {
-                System.out.println(clonetwo);
+            while (clonetwoout = stdInput.readLine()) != null) {
+                System.out.println(clonetwoout);
             }
              
             // read any errors from the attempted command
-            while ((s = stdError.readLine()) != null) {
-                System.out.println(clonetwo);
+            while ((clonetwoout = stdError.readLine()) != null) {
+                System.out.println(clonetwoout);
             }
              
             
@@ -128,26 +130,26 @@ public class teddyalivesetup
         }
         //runing
         System.out.println("Running...");
-        String runs = null;
+        String runso = null;
         
         try {
             
             Process runs = Runtime.getRuntime().exec("java -jar ./bin/TeddyAlive.jar");
              
             BufferedReader stdInput = new BufferedReader(new
-                 InputStreamReader(runs.getInputStream()));
+                 InputStreamReader(runso.getInputStream()));
  
             BufferedReader stdError = new BufferedReader(new
-                 InputStreamReader(runs.getErrorStream()));
+                 InputStreamReader(runso.getErrorStream()));
  
             // read the output from the command
-            while ((s = stdInput.readLine()) != null) {
-                System.out.println(runs);
+            while ((runso = stdInput.readLine()) != null) {
+                System.out.println(runso);
             }
              
             // read any errors from the attempted command
-            while ((s = stdError.readLine()) != null) {
-                System.out.println(runs);
+            while ((runso = stdError.readLine()) != null) {
+                System.out.println(runso);
             }
              
             System.exit(0);
