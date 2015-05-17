@@ -69,7 +69,7 @@ public class teddyalivesetup
         System.out.println( "Starting to download TeddyAlive" );
         //run
         // build my command as a list of strings
-List<String> command = new ArrayList<String>();
+List command = new ArrayList( command );
 command.add("git");
 command.add("clone");
 command.add("https://github.com/Gum-Joe/TeddyAlive.git");
