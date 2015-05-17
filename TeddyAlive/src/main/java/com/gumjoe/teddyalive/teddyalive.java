@@ -78,7 +78,7 @@ public class teddyalive
         Process process;
         if (Command == "Stop") {
           System.out.println("Stopping ");
-          System.exit(1);
+          System.exit(0);
         }else{
             System.err.println("InvalidCommand ");
             System.err.println("");
