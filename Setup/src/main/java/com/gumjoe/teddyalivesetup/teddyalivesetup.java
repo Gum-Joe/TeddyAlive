@@ -88,7 +88,7 @@ public class teddyalivesetup
                 System.out.println(s);
             }
              
-            System.exit(0);
+           
         }
         catch (IOException e) {
             System.out.println("exception happened - here's what I know: ");
@@ -98,7 +98,7 @@ public class teddyalivesetup
          
          System.out.println("Getting more files");
         
-        String o = null;
+        String s = null;
         try {
             
             Process clonetwo = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git ./sdk_commandbuilder");
@@ -108,18 +108,17 @@ public class teddyalivesetup
  
             BufferedReader stdError = new BufferedReader(new
                  InputStreamReader(clonetwo.getErrorStream()));
- 
             // read the output from the command
-            while ((o = stdInput.readLine()) != null) {
+            while ((s = stdInput.readLine()) != null) {
                 System.out.println(s);
             }
              
             // read any errors from the attempted command
-            while ((o = stdError.readLine()) != null) {
+            while ((s = stdError.readLine()) != null) {
                 System.out.println(s);
             }
              
-            System.exit(0);
+            
         }
         catch (IOException e) {
             System.out.println("exception happened - here's what I know: ");
@@ -128,19 +127,19 @@ public class teddyalivesetup
         }
         //runing
         System.out.println("Running...");
-        String runs = null;
+        String s = null;
         try {
             
             Process run = Runtime.getRuntime().exec("java -jar ./bin/TeddyAlive.jar");
              
             BufferedReader stdInput = new BufferedReader(new
-                 InputStreamReader(run.getInputStream()));
+                 InputStreamReader(s.getInputStream()));
  
             BufferedReader stdError = new BufferedReader(new
-                 InputStreamReader(run.getErrorStream()));
+                 InputStreamReader(s.getErrorStream()));
  
             // read the output from the command
-            while ((runs = stdInput.readLine()) != null) {
+            while ((s = stdInput.readLine()) != null) {
                 System.out.println(s);
             }
              
