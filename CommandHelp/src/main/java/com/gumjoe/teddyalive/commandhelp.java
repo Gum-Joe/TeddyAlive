@@ -60,7 +60,7 @@ import org.eclipse.jgit.revwalk.RevCommit;
  * Hello world!
  *
  */
-public class teddyalive 
+public class commandhelp
 {
     public static void main( String[] args )
     {
