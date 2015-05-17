@@ -27,6 +27,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
+import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.security.KeyManagementException;
@@ -70,13 +71,13 @@ public class teddyalivesetup
 			
             try {
             
-            Process clone = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone ./bin");
+            Process s = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone ./bin");
              
             BufferedReader stdInput = new BufferedReader(new
-                 InputStreamReader(clone.getInputStream()));
+                 InputStreamReader(s.getInputStream()));
  
             BufferedReader stdError = new BufferedReader(new
-                 InputStreamReader(clone.getErrorStream()));
+                 InputStreamReader(s.getErrorStream()));
  
             // read the output from the command
             while ((s = stdInput.readLine()) != null) {
@@ -98,7 +99,7 @@ public class teddyalivesetup
          
          System.out.println("Getting more files");
         
-        String s = null;
+        String clonetwo = null;
         try {
             
             Process clonetwo = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git ./sdk_commandbuilder");
@@ -110,12 +111,12 @@ public class teddyalivesetup
                  InputStreamReader(clonetwo.getErrorStream()));
             // read the output from the command
             while ((s = stdInput.readLine()) != null) {
-                System.out.println(s);
+                System.out.println(clonetwo);
             }
              
             // read any errors from the attempted command
             while ((s = stdError.readLine()) != null) {
-                System.out.println(s);
+                System.out.println(clonetwo);
             }
              
             
@@ -127,25 +128,26 @@ public class teddyalivesetup
         }
         //runing
         System.out.println("Running...");
-        String s = null;
+        String runs = null;
+        
         try {
             
-            Process run = Runtime.getRuntime().exec("java -jar ./bin/TeddyAlive.jar");
+            Process runs = Runtime.getRuntime().exec("java -jar ./bin/TeddyAlive.jar");
              
             BufferedReader stdInput = new BufferedReader(new
-                 InputStreamReader(s.getInputStream()));
+                 InputStreamReader(runs.getInputStream()));
  
             BufferedReader stdError = new BufferedReader(new
-                 InputStreamReader(s.getErrorStream()));
+                 InputStreamReader(runs.getErrorStream()));
  
             // read the output from the command
             while ((s = stdInput.readLine()) != null) {
-                System.out.println(s);
+                System.out.println(runs);
             }
              
             // read any errors from the attempted command
-            while ((runs = stdError.readLine()) != null) {
-                System.out.println(s);
+            while ((s = stdError.readLine()) != null) {
+                System.out.println(runs);
             }
              
             System.exit(0);
