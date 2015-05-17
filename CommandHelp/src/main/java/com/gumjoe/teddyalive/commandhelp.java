@@ -27,6 +27,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
+import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.security.KeyManagementException;
@@ -65,7 +66,10 @@ public class commandhelp
     public static void main( String[] args )
     {
         System.out.println( "Running the command help..." );
-             String s = null
+            
+             String s = null;
+             try {
+             // Change "cat" to "python" when deployed on pi
              Process ph = Runtime.getRuntime().exec("cat ./bin/Commands/CommandHelp.py");
              
             BufferedReader stdInput = new BufferedReader(new
@@ -86,13 +90,14 @@ public class commandhelp
                 System.out.println(s);
             }
              
-            
-        }
+             }
+        
         catch (IOException e) {
             System.out.println("exception happened - here's what I know: ");
             e.printStackTrace();
             System.exit(-1);
         }
+            
 
     }
 }
