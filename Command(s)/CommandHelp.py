@@ -1,10 +1,10 @@
-print "Help? Then you have come to the right place!"
-print "Showing help page 1 of 1"
-print "Tip: use help '<page number>' to show a certain page"
-print "                                                           "
-print "		Avalible Commands:"
-print "Stop: Shuts down the programme"
-print "		|_: Programme can be re-run by typeing 'java -jar bin/TeddyAlive.jar"
-print "help: Loads help"
-print "		|_: Use help <page> to specify page number, e.g: help 2"
-print "This is all the command availibe.  Visit <website> to see beta commands and versions."
+print ("	Help? Then you have come to the right place!")
+print ("	Showing help page 1 of 1")
+print ("	Tip: use help '<page number>' to show a certain page")
+print ("                                                           ")
+print ("		Avalible Commands:")
+print ("	Stop: Shuts down the programme")
+print ("		|_: Programme can be re-run by typeing 'java -jar bin/TeddyAlive.jar")
+print ("	help: Loads help")
+print ("		|_: Use help <page> to specify page number, e.g: help 2")
+print ("	This is all the command availibe.  Visit <website> to see beta commands and versions.")
