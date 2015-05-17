@@ -75,7 +75,7 @@ public class teddyalive
         Scanner userInputScanner = new Scanner(System.in);
         System.out.print("\nEnter it to continue... ");
         Process c = userInputScanner.nextLine();
-        String Command = userInputScanner.nextLine();
+        c.call();
         if (Command == "Stop") {
           System.out.println("Stopping ");
           System.exit(1);
