@@ -67,98 +67,51 @@ public class teddyalivesetup
     {
         System.out.println( "Hello, Welcome to Teddy Setup v0.1 ALPHA" );
         System.out.println( "Starting to download TeddyAlive" );
-        String s = null;
-			
-           //first
-            try {
-            
-            Process s = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone ./bin");
-             
-            BufferedReader stdInput = new BufferedReader(new
-                 InputStreamReader(s.getInputStream()));
+        //run
+        // build my command as a list of strings
+List<String> command = new ArrayList<String>();
+command.add("git");
+command.add("clone");
+command.add("https://github.com/Gum-Joe/TeddyAlive.git");
+command.add("-b clone");
+command.add("./bin");
  
-            BufferedReader stdError = new BufferedReader(new
-                 InputStreamReader(s.getErrorStream()));
+// execute my command
+SystemCommandExecutor commandExecutor = new SystemCommandExecutor(command);
+int result = commandExecutor.executeCommand();
  
-            // read the output from the command
-            while ((s = stdInput.readLine()) != null) {
-                System.out.println(s);
-            }
-             
-            // read any errors from the attempted command
-            while ((s = stdError.readLine()) != null) {
-                System.out.println(s);
-            }
-             
-           
-        }
-        catch (IOException e) {
-            System.out.println("exception happened - here's what I know: ");
-            e.printStackTrace();
-            System.exit(-1);
-        }
-         
-         System.out.println("Getting more files");
-        //sec
-        String clonetwoout = null;
-        
-        try {
-            
-            Process clonetwo = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git ./sdk_commandbuilder");
-             
-            BufferedReader stdInput = new BufferedReader(new
-                 InputStreamReader(clonetwoout.getInputStream()));
+// get the output from the command
+StringBuilder stdout = commandExecutor.getStandardOutputFromCommand();
+StringBuilder stderr = commandExecutor.getStandardErrorFromCommand();
  
-            BufferedReader stdError = new BufferedReader(new
-                 InputStreamReader(clonetwoout.getErrorStream()));
-            // read the output from the command
-            while (clonetwoout = stdInput.readLine()) != null) {
-                System.out.println(clonetwoout);
-            }
-             
-            // read any errors from the attempted command
-            while ((clonetwoout = stdError.readLine()) != null) {
-                System.out.println(clonetwoout);
-            }
-             
-            
-        }
-        catch (IOException e) {
-            System.out.println("exception happened - here's what I know: ");
-            e.printStackTrace();
-            System.exit(-1);
-        }
-        //runing
-        System.out.println("Running...");
-        String runso = null;
-        
-        try {
-            
-            Process runs = Runtime.getRuntime().exec("java -jar ./bin/TeddyAlive.jar");
-             
-            BufferedReader stdInput = new BufferedReader(new
-                 InputStreamReader(runso.getInputStream()));
+// print the output from the command
+System.out.println("STDOUT");
+System.out.println(stdout);
+System.out.println("STDERR");
+System.out.println(stderr);
+
+//runing the thing
+
+System.out.println( "Running..." );
+    List<String> commandtwo = new ArrayList<String>();
+commandtwo.add("java");
+commandtwo.add("-jar");
+commandtwo.add("./bin/TeddyAlive.jar");
  
-            BufferedReader stdError = new BufferedReader(new
-                 InputStreamReader(runso.getErrorStream()));
+// execute my command
+SystemCommandExecutor commandExecutortwo = new SystemCommandExecutor(commandtwo);
+int result = commandExecutortwo.executeCommand();
  
-            // read the output from the command
-            while ((runso = stdInput.readLine()) != null) {
-                System.out.println(runso);
-            }
-             
-            // read any errors from the attempted command
-            while ((runso = stdError.readLine()) != null) {
-                System.out.println(runso);
-            }
-             
-            System.exit(0);
-        }
-        catch (IOException e) {
-            System.out.println("exception happened - here's what I know: ");
-            e.printStackTrace();
-            System.exit(-1);
-        }
-        
+// get the output from the command
+StringBuilder stdout = commandExecutortwo.getStandardOutputFromCommand();
+StringBuilder stderr = commandExecutortwo.getStandardErrorFromCommand();
+ 
+// print the output from the command
+System.out.println("STDOUT");
+System.out.println(stdout);
+System.out.println("STDERR");
+System.out.println(stderr);
+    
+    
     }
 }
