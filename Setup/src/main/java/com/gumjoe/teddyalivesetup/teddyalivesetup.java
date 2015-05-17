@@ -69,43 +69,75 @@ public class teddyalivesetup
         System.out.println( "Starting to download TeddyAlive" );
         //run
         // build my command as a list of strings
-String command = "git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone ./bin";
+String s = null;
  
-// execute my command
-SystemCommandExecutor commandExecutor = new SystemCommandExecutor(command);
-int result = commandExecutor.executeCommand();
+        try {
+             
+        // run the Unix "ps -ef" command
+            // using the Runtime exec method:
+            Process p = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone ./bin");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(p.getInputStream()));
  
-// get the output from the command
-StringBuilder stdout = commandExecutor.getStandardOutputFromCommand();
-StringBuilder stderr = commandExecutor.getStandardErrorFromCommand();
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(p.getErrorStream()));
  
-// print the output from the command
-System.out.println("STDOUT");
-System.out.println(stdout);
-System.out.println("STDERR");
-System.out.println(stderr);
+            // read the output from the command
+            System.out.println("Here is the standard output of the command:\n");
+            while ((s = stdInput.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            // read any errors from the attempted command
+            System.out.println("Here is the standard error of the command (if any):\n");
+            while ((s = stdError.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            System.exit(0);
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
 
-//runing the thing
 
-System.out.println( "Running..." );
-    List<String> commandtwo = new ArrayList<String>();
-commandtwo.add("java");
-commandtwo.add("-jar");
-commandtwo.add("./bin/TeddyAlive.jar");
+// Run
+
+String b = null;
+try {
+             
+        // run the Unix "ps -ef" command
+            // using the Runtime exec method:
+            Process a = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone ./bin");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(a.getInputStream()));
  
-// execute my command
-SystemCommandExecutor commandExecutortwo = new SystemCommandExecutor(commandtwo);
-int result = commandExecutortwo.executeCommand();
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(a.getErrorStream()));
  
-// get the output from the command
-StringBuilder stdout = commandExecutortwo.getStandardOutputFromCommand();
-StringBuilder stderr = commandExecutortwo.getStandardErrorFromCommand();
- 
-// print the output from the command
-System.out.println("STDOUT");
-System.out.println(stdout);
-System.out.println("STDERR");
-System.out.println(stderr);
+            // read the output from the command
+            System.out.println("Here is the standard output of the command:\n");
+            while ((b = stdInput.readLine()) != null) {
+                System.out.println(b);
+            }
+             
+            // read any errors from the attempted command
+            System.out.println("Here is the standard error of the command (if any):\n");
+            while ((b = stdError.readLine()) != null) {
+                System.out.println(b);
+            }
+             
+            System.exit(0);
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
     
     
     }
