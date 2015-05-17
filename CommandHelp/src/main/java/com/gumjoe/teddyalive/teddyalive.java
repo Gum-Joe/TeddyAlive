@@ -1,4 +1,4 @@
-package com.gumjoe.teddyalive;
+package com.gumjoe.teddyalive.commands;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Predicate;
@@ -64,6 +64,35 @@ public class teddyalive
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "Running the command help..." );
+             String s = null
+             Process ph = Runtime.getRuntime().exec("cat ./bin/Commands/CommandHelp.py");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(ph.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(ph.getErrorStream()));
+ 
+            // read the output from the command
+            
+            while ((s = stdInput.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            // read any errors from the attempted command
+            
+            while ((s = stdError.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
+
     }
 }
