@@ -76,24 +76,8 @@ public class teddyalive
         System.out.print("\nEnter it to continue... ");
         String Command = userInputScanner.nextLine();
         Process process;
-        if (Command == "Stop") {
-          System.out.println("Stopping ");
-          System.exit(0);
-        }else{
-            System.err.println("InvalidCommand ");
-            System.err.println("");
-            System.err.println(" Please type a valid command ");
-            //re run
-        }
-        if (Command == "Help") {
-          ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandStop.jar");
-          Process CSt = pb.start();
-        } else {
-            System.err.println("InvalidCommand ");
-            System.err.println("");
-            System.err.println(" Please type a valid command ");
-            //re run
+        
             
-        }
+             
     }
 }
