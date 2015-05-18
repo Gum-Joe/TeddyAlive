@@ -1,2 +1,2 @@
-# MSSKJAR
-MinecraftServerStarterKitJars
+# Teddy 🐻 Alive
+The way ti make teddies alive
