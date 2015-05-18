@@ -76,7 +76,40 @@ public class teddyalive
         System.out.print("\nEnter it to continue... ");
         String Command = userInputScanner.nextLine();
         Process process;
-        
+        String s = null;
+ 
+       //running the command
+ try {
+             
+        // run the Java file "ps -ef" command
+            // using the Runtime exec method:
+            Process p = Runtime.getRuntime().exec("java -jar ./bin/Commands/TeddyAliveCommand" + Command + ".jar");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(p.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(p.getErrorStream()));
+ 
+            // read the output from the command
+            System.out.println("Here is the standard output of the command:\n");
+            while ((s = stdInput.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            // read any errors from the attempted command
+            System.out.println("Here is the standard error of the command (if any):\n");
+            while ((s = stdError.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            System.exit(0);
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
             
              
     }
