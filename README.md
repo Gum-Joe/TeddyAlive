@@ -1,2 +1,2 @@
-# Teddy 🐻 Alive
-The way ti make teddies alive
+# Teddy Alive
+The way to make teddies alive
