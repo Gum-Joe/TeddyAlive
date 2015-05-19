@@ -10,7 +10,8 @@ $loginprompt=$login
 echo Please login...
 read RESP
 if [ "$RESP" = $loginprompt ]; then 
-   echo "Correct!"
+   echo "Correct! Running..."
+   java -jar ./bin/TeddyAlive.jar
  else 
    echo "Incorrect" 
  fi 
