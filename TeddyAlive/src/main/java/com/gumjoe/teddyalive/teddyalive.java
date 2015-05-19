@@ -76,24 +76,41 @@ public class teddyalive
         System.out.print("\nEnter it to continue... ");
         String Command = userInputScanner.nextLine();
         Process process;
-        if (Command == "Stop") {
-          System.out.println("Stopping ");
-          System.exit(0);
-        }else{
-            System.err.println("InvalidCommand ");
-            System.err.println("");
-            System.err.println(" Please type a valid command ");
-            //re run
+        String s = null;
+ 
+       //running the command
+ try {
+             
+        // run the Java file "ps -ef" command
+            // using the Runtime exec method:
+            Process a = Runtime.getRuntime().exec("java -jar ./bin/Commands/TeddyAliveCommand" + Command + ".jar");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(a.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(a.getErrorStream()));
+ 
+            // read the output from the command
+            System.out.println("Here is the standard output of the command:\n");
+            while ((s = stdInput.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            // read any errors from the attempted command
+            System.out.println("Here is the standard error of the command (if any):\n");
+            while ((s = stdError.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            System.exit(0);
         }
-        if (Command == "Help") {
-          ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandStop.jar");
-          Process CSt = pb.start();
-        } else {
-            System.err.println("InvalidCommand ");
-            System.err.println("");
-            System.err.println(" Please type a valid command ");
-            //re run
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
             
-        }
+             
     }
 }
