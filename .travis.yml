@@ -1,16 +1,8 @@
-<<<<<<< HEAD
+
 language: java
 
 mvn:
 - 3.3.3
 - clean
 - install
-    
-=======
-language: bash
 
-script:
-    - git branch BETAS
-    - git checkout BETAS
-    - bash runme.sh
->>>>>>> ee548c6e29691fa83e70bd346e325cafa636c7d1
