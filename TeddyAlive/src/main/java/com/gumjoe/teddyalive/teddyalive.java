@@ -70,6 +70,10 @@ public class teddyalive
         System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" );
         ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
         Process p = pb.start();
+        if (!Auth.exits()){
+            System.out.println( "Authenticater does not exits" );
+            System.exit(1);
+        }
         
         System.out.println( "Hello! To continue, just type you command" );
         Scanner userInputScanner = new Scanner(System.in);
