@@ -11,7 +11,7 @@ GPIO.setup(Motor1A,GPIO.OUT)
 GPIO.setup(Motor1B,GPIO.OUT)
 GPIO.setup(Motor1E,GPIO.OUT)
  
-print "Going forwards"
+print "Put the code here - forwards"
 GPIO.output(Motor1A,GPIO.HIGH)
 GPIO.output(Motor1B,GPIO.LOW)
 GPIO.output(Motor1E,GPIO.HIGH)

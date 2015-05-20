@@ -1,3 +1,4 @@
+# add your command for help here
 print ("	Help? Then you have come to the right place!")
 print ("	Showing help page 1 of 1")
 print ("	Tip: use help '<page number>' to show a certain page")
