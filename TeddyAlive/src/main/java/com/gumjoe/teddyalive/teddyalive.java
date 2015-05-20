@@ -84,19 +84,15 @@ public class teddyalive
         if (Command == "Stop") {
           System.out.println("Stopping ");
           System.exit(0);
-        }else{
-            System.err.println("InvalidCommand ");
-            System.err.println("");
-            System.err.println(" Please type a valid command ");
-            //re run
         }
         if (Command == "Help") {
-          ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandStop.jar");
+          System.out.println("Help ");
+	  ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandHelp/target/TeddyAliveCommandHelp.jar");
           Process CSt = pb.start();
         } else {
-            System.err.println("InvalidCommand ");
-            System.err.println("");
-            System.err.println(" Please type a valid command ");
+            System.out.println("InvalidCommand ");
+            System.out.println("");
+            System.out.println(" Please type a valid command ");
             //re run
             
         }
