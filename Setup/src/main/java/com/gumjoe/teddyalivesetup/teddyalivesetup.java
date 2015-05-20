@@ -75,7 +75,7 @@ String s = null;
              
         // run the Unix "ps -ef" command
             // using the Runtime exec method:
-            Process p = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone ./bin");
+            Process p = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git ./bin");
              
             BufferedReader stdInput = new BufferedReader(new
                  InputStreamReader(p.getInputStream()));
@@ -111,7 +111,7 @@ try {
              
         // run the Unix "ps -ef" command
             // using the Runtime exec method:
-            Process a = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git -b clone ./bin");
+            Process a = Runtime.getRuntime().exec("git branch sdk");
              
             BufferedReader stdInput = new BufferedReader(new
                  InputStreamReader(a.getInputStream()));
@@ -129,6 +129,40 @@ try {
             
             while ((b = stdError.readLine()) != null) {
                 System.out.println(b);
+            }
+             
+            System.exit(0);
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
+        
+        //clone sdk
+        String b = null;
+try {
+             
+        // run the Unix "ps -ef" command
+            // using the Runtime exec method:
+            Process z = Runtime.getRuntime().exec("git clone ./bin -b sdk ./sdk");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(z.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(z.getErrorStream()));
+ 
+            // read the output from the command
+            
+            while ((y = stdInput.readLine()) != null) {
+                System.out.println(y);
+            }
+             
+            // read any errors from the attempted command
+            
+            while ((y = stdError.readLine()) != null) {
+                System.out.println(y);
             }
              
             System.exit(0);
