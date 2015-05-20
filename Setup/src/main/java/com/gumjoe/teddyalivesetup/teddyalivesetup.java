@@ -111,7 +111,7 @@ try {
              
         // run the Unix "ps -ef" command
             // using the Runtime exec method:
-            Process a = Runtime.getRuntime().exec("git branch sdk");
+            Process a = Runtime.getRuntime().exec("./bin/SetupDepone");
              
             BufferedReader stdInput = new BufferedReader(new
                  InputStreamReader(a.getInputStream()));
@@ -140,7 +140,7 @@ try {
         }
         
         //clone sdk
-        String b = null;
+        String y = null;
 try {
              
         // run the Unix "ps -ef" command
