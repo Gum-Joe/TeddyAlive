@@ -111,7 +111,7 @@ try {
              
         // run the Unix "ps -ef" command
             // using the Runtime exec method:
-            Process a = Runtime.getRuntime().exec("./bin/SetupDepone.sh");
+            Process a = Runtime.getRuntime().exec("sh ./bin/SetupDepone.sh");
              
             BufferedReader stdInput = new BufferedReader(new
                  InputStreamReader(a.getInputStream()));
@@ -131,7 +131,7 @@ try {
                 System.out.println(b);
             }
              
-            System.exit(0);
+
         }
         catch (IOException e) {
             System.out.println("exception happened - here's what I know: ");
@@ -145,7 +145,7 @@ try {
              
         // run the Unix "ps -ef" command
             // using the Runtime exec method:
-            Process z = Runtime.getRuntime().exec("git clone ./bin -b sdk ./sdk");
+            Process z = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive -b sdk ./sdk");
              
             BufferedReader stdInput = new BufferedReader(new
                  InputStreamReader(z.getInputStream()));
@@ -165,7 +165,41 @@ try {
                 System.out.println(y);
             }
              
-            System.exit(0);
+
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
+
+//Running
+String n = null
+try {
+             
+        // run the Unix "ps -ef" command
+            // using the Runtime exec method:
+            Process m = Runtime.getRuntime().exec("java -jar ./bin/TeddyAlive/target/TeddyAlive.jar");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(m.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(m.getErrorStream()));
+ 
+            // read the output from the command
+            
+            while ((n = stdInput.readLine()) != null) {
+                System.out.println(n);
+            }
+             
+            // read any errors from the attempted command
+            
+            while ((n = stdError.readLine()) != null) {
+                System.out.println(n);
+            }
+             
+
         }
         catch (IOException e) {
             System.out.println("exception happened - here's what I know: ");
