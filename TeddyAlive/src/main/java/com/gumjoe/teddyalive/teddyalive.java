@@ -87,7 +87,7 @@ public class teddyalive
              
         // run the Java file "ps -ef" command
             // using the Runtime exec method:
-            Process a = Runtime.getRuntime().exec("java -jar ./bin/Commands/TeddyAliveCommand" + Command + ".jar");
+            Process a = Runtime.getRuntime().exec("java -jar ./bin/Command" + Command + "/target/TeddyAliveCommand" + Command + ".jar");
              
             BufferedReader stdInput = new BufferedReader(new
                  InputStreamReader(a.getInputStream()));
