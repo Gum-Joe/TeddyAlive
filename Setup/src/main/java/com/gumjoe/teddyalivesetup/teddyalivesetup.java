@@ -111,7 +111,7 @@ try {
              
         // run the Unix "ps -ef" command
             // using the Runtime exec method:
-            Process a = Runtime.getRuntime().exec("./bin/SetupDepone");
+            Process a = Runtime.getRuntime().exec("./bin/SetupDepone.sh");
              
             BufferedReader stdInput = new BufferedReader(new
                  InputStreamReader(a.getInputStream()));
