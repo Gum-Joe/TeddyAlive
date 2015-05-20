@@ -1,19 +1,15 @@
 echo Teddy alive v0.1 ALPHA EMULATOR
-echo Preparing...
-echo "Hello, Welcome"
-echo -n Enter the login to use...
-read login
-
-$loginprompt=$login
-
-
-echo Please login...
+echo "Hello!"
+echo
+echo "Please login... "
 read RESP
 if [ "$RESP" = $loginprompt ]; then 
    echo "Correct! Running..."
    java -jar ./bin/TeddyAlive.jar
  else 
    echo "Incorrect" 
+   echo "Please type it correctly"
+   Start.sh
  fi 
 
 
