@@ -174,7 +174,7 @@ try {
         }
 
 //Running
-String n = null
+String n = null;
 try {
              
         // run the Unix "ps -ef" command
