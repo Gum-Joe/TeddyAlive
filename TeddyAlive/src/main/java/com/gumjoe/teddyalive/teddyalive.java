@@ -70,8 +70,8 @@ public class teddyalive
         System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" );
         ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
         Process p = pb.start();
-        String Auth = new File("./bin/OAuth.sh")
-        if (!Auth.exits()){
+       File Auth = new File("./bin/OAuth.sh");
+        if (!Auth.exists()){
             System.out.println( "Authenticater does not exits" );
             System.exit(1);
         }
