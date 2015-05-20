@@ -70,8 +70,7 @@ public class teddyalive
         System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" );
         ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
         Process p = pb.start();
-       File Auth = new File("./bin/OAuth.sh");
-        if (!Auth.exists()){
+        if (!Auth.exits()){
             System.out.println( "Authenticater does not exits" );
             System.exit(1);
         }
@@ -81,20 +80,41 @@ public class teddyalive
         System.out.print("\nEnter it to continue... ");
         String Command = userInputScanner.nextLine();
         Process process;
-        if (Command == "Stop") {
-          System.out.println("Stopping ");
-          System.exit(0);
+        String s = null;
+ 
+       //running the command
+ try {
+             
+        // run the Java file "ps -ef" command
+            // using the Runtime exec method:
+            Process a = Runtime.getRuntime().exec("java -jar ./bin/Command" + Command + "/target/TeddyAliveCommand" + Command + ".jar");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(a.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(a.getErrorStream()));
+ 
+            // read the output from the command
+            System.out.println("Here is the standard output of the command:\n");
+            while ((s = stdInput.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            // read any errors from the attempted command
+            System.out.println("Here is the standard error of the command (if any):\n");
+            while ((s = stdError.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            System.exit(0);
         }
-        if (Command == "Help") {
-          System.out.println("Help ");
-	  ProcessBuilder CStop = new ProcessBuilder("java", "-jar", "./bin/CommandHelp/target/TeddyAliveCommandHelp.jar");
-          Process CSt = pb.start();
-        } else {
-            System.out.println("InvalidCommand ");
-            System.out.println("");
-            System.out.println(" Please type a valid command ");
-            //re run
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
             
-        }
+             
     }
 }
