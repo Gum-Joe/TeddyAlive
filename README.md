@@ -4,10 +4,10 @@ The way to make teddies alive
 First, download and run Teddy alive setup using the following command: `java -jar TeddyAliveSetup.jar` in an empty folder.
 It can be ran on a Windows PC, Mac and rasberry pi but to use commands such as Move forwards, you need the correct configuration of a rasberry pi to use TeddyAlive (not avalibe - coming soon).
 
-<<<<<<< HEAD
+
 # Running it
 Simply type: `java -jar ./bin/TeddyAlive.jar` or `Start.sh`
-=======
+
 
 #CHANGE LOG
 09.05.2015
@@ -23,6 +23,6 @@ New Support for Mac
 
 1.1: FINAL version 1.1.60 (1.1 build 61) released, includes:
 Bug fixes ready for the final version
->>>>>>> ee548c6e29691fa83e70bd346e325cafa636c7d1
+
 
 When you are prompt to type a command, type it and see the output. Currently working on sounds and more.
