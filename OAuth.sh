@@ -10,7 +10,4 @@ if [ "$RESP" = $loginprompt ]; then
    echo "Incorrect" 
    echo "Please type it correctly"
    Start.sh
- fi 
-
-
-
+ fi
