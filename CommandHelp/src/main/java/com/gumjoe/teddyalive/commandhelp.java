@@ -65,7 +65,6 @@ public class commandhelp
 {
     public static void main( String[] args )
     {
-        System.out.println( "Running the command help..." );
             
              String s = null;
              try {
