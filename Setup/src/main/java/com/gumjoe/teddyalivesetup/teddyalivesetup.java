@@ -207,39 +207,7 @@ try {
         }
         
 
-//Running
-String n = null;
-try {
-             
-        // run the Unix "ps -ef" command
-            // using the Runtime exec method:
-            Process m = Runtime.getRuntime().exec("java -jar ./bin/TeddyAlive/target/TeddyAlive.jar");
-             
-            BufferedReader stdInput = new BufferedReader(new
-                 InputStreamReader(m.getInputStream()));
- 
-            BufferedReader stdError = new BufferedReader(new
-                 InputStreamReader(m.getErrorStream()));
- 
-            // read the output from the command
-            
-            while ((n = stdInput.readLine()) != null) {
-                System.out.println(n);
-            }
-             
-            // read any errors from the attempted command
-            
-            while ((n = stdError.readLine()) != null) {
-                System.out.println(n);
-            }
-             
-
-        }
-        catch (IOException e) {
-            System.out.println("exception happened - here's what I know: ");
-            e.printStackTrace();
-            System.exit(-1);
-        }
+        System.out.println("Now just run Start.sh");
     
     
     }
