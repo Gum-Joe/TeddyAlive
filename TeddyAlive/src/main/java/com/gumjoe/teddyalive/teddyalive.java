@@ -66,10 +66,10 @@ public class teddyalive
     public static void main( String[] args ) throws Exception
     {
         System.out.println( "Welcome to TeddyAlive" );
-        File bin = new File("./bin")
+        File bin = new File("./bin");
         if (!bin.exists()){
             System.out.println( "TeddyAlive does not exist!" );
-            String s = null
+            String s = null;
             try {
              
         // run the Unix "ps -ef" command
@@ -208,13 +208,13 @@ public class teddyalive
                  InputStreamReader(a.getErrorStream()));
  
             // read the output from the command
-            System.out.println("Here is the standard output of the command:\n");
+           
             while ((s = stdInput.readLine()) != null) {
                 System.out.println(s);
             }
              
             // read any errors from the attempted command
-            System.out.println("Here is the standard error of the command (if any):\n");
+            
             while ((s = stdError.readLine()) != null) {
                 System.out.println(s);
             }
