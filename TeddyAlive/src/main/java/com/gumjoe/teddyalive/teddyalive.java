@@ -181,9 +181,9 @@ public class teddyalive
         
         // Checking for new plugins
         File plugin = new File("./bin/plugins/*");
-        if (plugin.exists){
+        if (plugin.exists()){
             ProcessBuilder hb = new ProcessBuilder("patch", "-b", "./bin/plugins/*/helppatch.patch", "./bin/Commands/CommandHelp.py");
-            Process l = pb.start();
+            Process l = hb.start();
         }
         
         System.out.println( "Downloading/Updateing Files" );
