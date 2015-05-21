@@ -67,10 +67,116 @@ public class teddyalive
     {
         System.out.println( "Welcome to TeddyAlive" );
         File bin = new File("./bin")
-        if (!bin.exists){
-            System.out.println( "TeddyAlive does not exist!" )
+        if (!bin.exists()){
+            System.out.println( "TeddyAlive does not exist!" );
+            String s = null
+            try {
+             
+        // run the Unix "ps -ef" command
+            // using the Runtime exec method:
+            Process p = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git ./bin");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(p.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(p.getErrorStream()));
+ 
+            // read the output from the command
+            
+            while ((s = stdInput.readLine()) != null) {
+                System.out.println(s);
+            }
+             
+            // read any errors from the attempted command
+            
+            while ((s = stdError.readLine()) != null) {
+                System.out.println(s);
+            }
+             
             
         }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
+   
+        }
+        
+        File sdk = new File("./sdk");
+        if (!sdk.exists()){
+            String y = null;
+            try {
+             
+        // run the Unix "ps -ef" command
+            // using the Runtime exec method:
+            Process z = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive -b sdk ./sdk");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(z.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(z.getErrorStream()));
+ 
+            // read the output from the command
+            
+            while ((y = stdInput.readLine()) != null) {
+                System.out.println(y);
+            }
+             
+            // read any errors from the attempted command
+            
+            while ((y = stdError.readLine()) != null) {
+                System.out.println(y);
+            }
+             
+
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
+        
+        }
+        
+        File musiclib = new File("./bin/libs/beets");
+        if (!musiclib.exists()){
+            String k = null;
+            try {
+             
+        // run the Unix "ps -ef" command
+            // using the Runtime exec method:
+            Process j = Runtime.getRuntime().exec("git clone https://github.com/sampsyo/beets.git ./bin/libs/beets");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(j.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(j.getErrorStream()));
+ 
+            // read the output from the command
+            
+            while ((k = stdInput.readLine()) != null) {
+                System.out.println(k);
+            }
+             
+            // read any errors from the attempted command
+            
+            while ((k = stdError.readLine()) != null) {
+                System.out.println(k);
+            }
+             
+
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
+        }
+        
         System.out.println( "Downloading/Updateing Files" );
         System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" );
         ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
