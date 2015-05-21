@@ -180,9 +180,10 @@ public class teddyalive
         }
         
         // Checking for new plugins
-        File plugin = new File("./bin/plugins/*");
+        File plugin = new File("./plugins/.");
         if (plugin.exists()){
-            ProcessBuilder hb = new ProcessBuilder("patch", "-b", "./bin/plugins/*/helppatch.patch", "./bin/Commands/CommandHelp.py");
+             System.out.println( "Updateing files..." );
+            ProcessBuilder hb = new ProcessBuilder("patch", "-b", "./plugins/*/*.patch", "./bin/Commands/CommandHelp.py");
             Process l = hb.start();
         }
         
