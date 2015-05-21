@@ -66,13 +66,15 @@ public class teddyalive
     public static void main( String[] args ) throws Exception
     {
         System.out.println( "Welcome to TeddyAlive" );
+        //Starting
+        //loading
         File bin = new File("./bin");
         if (!bin.exists()){
             System.out.println( "TeddyAlive does not exist!" );
             String s = null;
             try {
              
-        // run the Unix "ps -ef" command
+        // clone bin
             // using the Runtime exec method:
             Process p = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive.git ./bin");
              
@@ -109,7 +111,7 @@ public class teddyalive
             String y = null;
             try {
              
-        // run the Unix "ps -ef" command
+        // clone sdk
             // using the Runtime exec method:
             Process z = Runtime.getRuntime().exec("git clone https://github.com/Gum-Joe/TeddyAlive -b sdk ./sdk");
              
@@ -146,7 +148,7 @@ public class teddyalive
             String k = null;
             try {
              
-        // run the Unix "ps -ef" command
+        // clone music lib
             // using the Runtime exec method:
             Process j = Runtime.getRuntime().exec("git clone https://github.com/sampsyo/beets.git ./bin/libs/beets");
              
