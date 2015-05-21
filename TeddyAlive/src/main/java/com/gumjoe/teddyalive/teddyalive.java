@@ -179,6 +179,11 @@ public class teddyalive
         }
         }
         
+        
+        System.out.println( "Downloading/Updateing Files" );
+        System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" );
+        ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
+        Process p = pb.start();
         // Checking for new plugins
         File plugin = new File("./plugins/.");
         if (plugin.exists()){
@@ -186,12 +191,7 @@ public class teddyalive
             ProcessBuilder hb = new ProcessBuilder("patch", "-b", "./plugins/*/*.patch", "./bin/Commands/CommandHelp.py");
             Process l = hb.start();
         }
-        
-        System.out.println( "Downloading/Updateing Files" );
-        System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" );
-        ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
-        Process p = pb.start();
-        File Auth = new File("./bin/OAuth.sh");
+File Auth = new File("./bin/OAuth.sh");
         if (!Auth.exists()){
             System.out.println( "Authenticater does not exits" );
             System.exit(1);
