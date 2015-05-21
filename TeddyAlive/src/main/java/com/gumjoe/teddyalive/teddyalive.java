@@ -66,6 +66,11 @@ public class teddyalive
     public static void main( String[] args ) throws Exception
     {
         System.out.println( "Welcome to TeddyAlive" );
+        File bin = new File("./bin")
+        if (!bin.exists){
+            System.out.println( "TeddyAlive does not exist!" )
+            
+        }
         System.out.println( "Downloading/Updateing Files" );
         System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" );
         ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
