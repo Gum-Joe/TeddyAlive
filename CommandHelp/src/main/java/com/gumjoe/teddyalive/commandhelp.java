@@ -70,7 +70,7 @@ public class commandhelp
              String s = null;
              try {
              // Change "cat" to "python" when deployed on pi
-             Process ph = Runtime.getRuntime().exec("cat ./bin/Commands/CommandHelp.py");
+             Process ph = Runtime.getRuntime().exec("python ./bin/Commands/CommandHelp.py");
              
             BufferedReader stdInput = new BufferedReader(new
                  InputStreamReader(ph.getInputStream()));

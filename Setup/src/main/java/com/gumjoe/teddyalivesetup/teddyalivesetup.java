@@ -172,6 +172,40 @@ try {
             e.printStackTrace();
             System.exit(-1);
         }
+        // Libs
+        String k = null;
+try {
+             
+        // run the Unix "ps -ef" command
+            // using the Runtime exec method:
+            Process j = Runtime.getRuntime().exec("git clone https://github.com/sampsyo/beets.git ./bin/libs/beets");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(j.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(j.getErrorStream()));
+ 
+            // read the output from the command
+            
+            while ((k = stdInput.readLine()) != null) {
+                System.out.println(k);
+            }
+             
+            // read any errors from the attempted command
+            
+            while ((k = stdError.readLine()) != null) {
+                System.out.println(k);
+            }
+             
+
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
+        
 
 //Running
 String n = null;

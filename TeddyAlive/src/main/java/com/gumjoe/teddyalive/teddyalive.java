@@ -71,7 +71,7 @@ public class teddyalive
         ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
         Process p = pb.start();
         File Auth = new File("./bin/OAuth.sh");
-        if (!Auth.exits()){
+        if (!Auth.exists()){
             System.out.println( "Authenticater does not exits" );
             System.exit(1);
         }
