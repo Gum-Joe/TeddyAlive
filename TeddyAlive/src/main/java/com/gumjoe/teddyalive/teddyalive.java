@@ -179,6 +179,13 @@ public class teddyalive
         }
         }
         
+        // Checking for new plugins
+        File plugin = new File("./bin/plugins/*")
+        if (plugin.exists){
+            ProcessBuilder hb = new ProcessBuilder("patch", "-b", "./bin/plugins/*/helppatch.patch", "./bin/Commands/CommandHelp.py");
+            Process l = pb.start();
+        }
+        
         System.out.println( "Downloading/Updateing Files" );
         System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" );
         ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
