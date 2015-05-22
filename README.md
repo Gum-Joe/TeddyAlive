@@ -10,3 +10,4 @@ Simply type: `java -jar ./bin/TeddyAlive.jar` or `Start.sh`
 
 
 When you are prompt to type a command, type it and see the output. Currently working on sounds and more.
+P.s: Only available for internal testers
