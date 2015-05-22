@@ -2,5 +2,5 @@
 language: java
 
 script:
-  - exec mvn clean install
+  - exec mvn-travis-build.sh
   - exec ./pushjar.sh
