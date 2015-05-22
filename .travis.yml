@@ -2,4 +2,4 @@
 language: java
 
 script:
-  - bundle exec mvn clean install
+  - exec mvn clean install
