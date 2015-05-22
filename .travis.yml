@@ -1,6 +1,6 @@
 
 language: java
-
+sudo: required
 script:
  - exec mvn clean install
  - exec ./pushjar.sh
