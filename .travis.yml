@@ -3,3 +3,4 @@ language: java
 
 script:
   - exec mvn clean install
+  - exec ./pushjar.sh
