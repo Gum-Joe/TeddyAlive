@@ -8,7 +8,7 @@ public class UniversalTest {
 	@Test
 	public void test() {
  
-		Assert.assertEquals(App.main, Starts.with("Welcome"));
+		Assert.assertEquals(App.main, .starts.with("Welcome"));
  
 	}
  
