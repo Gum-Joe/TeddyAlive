@@ -2,4 +2,5 @@
 language: java
 
 script:
-  - exec ./pushjar.sh
+ - exec mvn clean install
+ - exec ./pushjar.sh
