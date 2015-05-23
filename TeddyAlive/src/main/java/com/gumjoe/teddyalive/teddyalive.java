@@ -188,8 +188,37 @@ public class teddyalive
         File plugin = new File("./plugins/.");
         if (plugin.exists()){
              System.out.println( "Updateing files..." );
-            ProcessBuilder hb = new ProcessBuilder("patch", "-b", "./plugins/*/*.patch", "./bin/Commands/CommandHelp.py");
-            Process l = hb.start();
+            try {
+             
+        // clone music lib
+            // using the Runtime exec method:
+            Process r = Runtime.getRuntime().exec("patch -b ./bin/Commands/CommandHelp.py ./plugins/*/*.patch");
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(r.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(r.getErrorStream()));
+ 
+            // read the output from the command
+            
+            while ((t = stdInput.readLine()) != null) {
+                System.out.println(t);
+            }
+             
+            // read any errors from the attempted command
+            
+            while ((t = stdError.readLine()) != null) {
+                System.out.println(t);
+            }
+             
+
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
         }
 File Auth = new File("./bin/OAuth.sh");
         if (!Auth.exists()){
