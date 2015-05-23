@@ -188,6 +188,7 @@ public class teddyalive
         File plugin = new File("./plugins/.");
         if (plugin.exists()){
              System.out.println( "Updateing files..." );
+            String t = null
             try {
              
         // clone music lib
