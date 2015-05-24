@@ -57,14 +57,17 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
+import com.gumjoe.universalutils.*;
 /**
  * Hello world!
  *
  */
-public class teddyalive 
+public class teddyalive
 {
     public static void main( String[] args ) throws Exception
     {
+        File test = new File("Test");
+        clone("https://github.com/Gm-Joe/MinecraftServerStarterKit", "master", test);
         System.out.println( "Welcome to TeddyAlive" );
         //Starting
         //loading
@@ -269,4 +272,40 @@ File Auth = new File("./bin/OAuth.sh");
             
              
     }
+public static void clone(String url, String branch, File target) throws GitAPIException
+{
+   
+        String i = null;
+        try {
+             
+        // clone sdk
+            // using the Runtime exec method:
+            Process l = Runtime.getRuntime().exec("git clone " + url + " -b " + branch + target);
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(l.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(l.getErrorStream()));
+ 
+            // read the output from the command
+            
+            while ((i = stdInput.readLine()) != null) {
+                System.out.println(i);
+            }
+             
+            // read any errors from the attempted command
+            
+            while ((i = stdError.readLine()) != null) {
+                System.out.println(i);
+            }
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
+    }
 }
+
+
