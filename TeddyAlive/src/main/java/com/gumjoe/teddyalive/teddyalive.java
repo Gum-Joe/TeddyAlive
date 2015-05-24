@@ -58,7 +58,7 @@ import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import com.gumjoe.universalutils.*;
-import com.gumjoe.*.*;
+import com.gumjoe.teddyalive.*;
 /**
  * Hello world!
  *
@@ -68,7 +68,7 @@ public class teddyalive
     public static void main( String[] args ) throws Exception
     {
         System.out.println( "Welcome to TeddyAlive" );
-        System.out.println( "Your running version " + version.versionnumber + "-" + version.versiontype + "-" + version.realesetype + " with " + utilsVersion.name + utilsVersion.versionnumber + "-" + utilsVersion.versiontype + "-" + utilsVersion.realesetype );
+        System.out.println( "Your running version " + version.versionnumber + "-" + version.versiontype + "-" + version.realesetype + " with " + utilsVersion.name + "-" utilsVersion.versionnumber + "-" + utilsVersion.versiontype + "-" + utilsVersion.realesetype );
         //Starting
         //loading
         File bin = new File("./bin");

@@ -64,16 +64,10 @@ import com.gumjoe.universalutils.*;
  */
 public class version
 {
-    public static void main( String[] args ) throws Exception
-    {
-        public String name = "TeddyAlive"
-        public String versionnumber = "0.1"
-        public String versiontype = "ALPHA"
-        public String realesetype = "PRE-REALESE"
-            
-             
-    }
-
+        public static String name = "TeddyAlive";
+        public static String versionnumber = "0.1";
+        public static String versiontype = "ALPHA";
+        public static String realesetype = "PRE-REALESE";
 }
 
 

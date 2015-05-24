@@ -1,4 +1,4 @@
-package com.gumjoe.teddyalive;
+package com.gumjoe.universalutils;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Predicate;
@@ -64,16 +64,10 @@ import com.gumjoe.universalutils.*;
  */
 public class utilsVersion
 {
-    public static void main( String[] args ) throws Exception
-    {
-        public String name = "Universal Utilties and Functions API"
-        public String versionnumber = "0.1"
-        public String versiontype = "ALPHA"
-        public String realesetype = "PRE-REALESE"
-            
-             
-    }
-
+        public static String name = "Universal Utilties and Functions";
+        public static String versionnumber = "0.1";
+        public static String versiontype = "ALPHA-API";
+        public static String realesetype = "PRE-REALESE";
 }
 
 
