@@ -68,7 +68,7 @@ public class teddyalive
     public static void main( String[] args ) throws Exception
     {
         System.out.println( "Welcome to TeddyAlive" );
-        System.out.println( "Your running version " + version.versionnumber + "-" + version.versiontype + "-" + version.realesetype + " with " + utilsVersion.name + "-" utilsVersion.versionnumber + "-" + utilsVersion.versiontype + "-" + utilsVersion.realesetype );
+        System.out.println( "Running version: " + version.versionnumber + "-" + version.versiontype + "-" + version.realesetype + " on " + System.getProperty( "os.name" ) );
         //Starting
         //loading
         File bin = new File("./bin");
