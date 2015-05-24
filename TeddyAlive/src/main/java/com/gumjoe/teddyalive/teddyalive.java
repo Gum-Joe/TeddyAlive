@@ -58,6 +58,7 @@ import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import com.gumjoe.universalutils.*;
+import com.gumjoe.*.*;
 /**
  * Hello world!
  *
@@ -67,23 +68,24 @@ public class teddyalive
     public static void main( String[] args ) throws Exception
     {
         System.out.println( "Welcome to TeddyAlive" );
+        System.out.println( "Your running version " + version.versionnumber + "-" + version.versiontype + "-" + version.realesetype + " with " + utilsVersion.name + utilsVersion.versionnumber + "-" + utilsVersion.versiontype + "-" + utilsVersion.realesetype );
         //Starting
         //loading
         File bin = new File("./bin");
         if (!bin.exists()){
             System.out.println( "TeddyAlive does not exist!" );
-            clone("https://github.com/Gum-Joe/TeddyAlive", "master", bin);
+            universalutils.clone("https://github.com/Gum-Joe/TeddyAlive", "master", bin);
    
         }
         
         File sdk = new File("./sdk");
         if (!sdk.exists()){
-            clone("https://github.com/Gum-Joe/TeddyAlive", "sdk", sdk);
+            universalutils.clone("https://github.com/Gum-Joe/TeddyAlive", "sdk", sdk);
         }
         
         File musiclib = new File("./libs/beets");
         if (!musiclib.exists()){
-            clone("https://github.com/sampsyo/beets.git", "master", musiclib);
+            universalutils.clone("https://github.com/sampsyo/beets.git", "master", musiclib);
         }
         
         
