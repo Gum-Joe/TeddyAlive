@@ -4,7 +4,7 @@ import junit.framework.Assert;
 import org.junit.Test;
 import java.io.*;
  
-public class CloneTest {
+public class clonetest {
  
 	@Test
 	public void testPrintclone() {
