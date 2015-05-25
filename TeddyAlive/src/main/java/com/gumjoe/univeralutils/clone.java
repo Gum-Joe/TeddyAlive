@@ -79,13 +79,13 @@ public class clone
             // read the output from the command
             
             while ((i = stdInput.readLine()) != null) {
-                System.out.println(i);
+                return i;
             }
              
             // read any errors from the attempted command
             
             while ((i = stdError.readLine()) != null) {
-                System.out.println(i);
+                return i;
             }
         }
         catch (IOException e) {
