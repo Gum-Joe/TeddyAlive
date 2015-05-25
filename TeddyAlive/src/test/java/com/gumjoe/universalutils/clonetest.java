@@ -2,6 +2,7 @@ package com.gumjoe.universalutils;
  
 import junit.framework.Assert;
 import org.junit.Test;
+import java.io.*;
  
 public class CloneTest {
  
