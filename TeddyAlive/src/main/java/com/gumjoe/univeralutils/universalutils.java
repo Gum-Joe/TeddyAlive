@@ -58,9 +58,11 @@ import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import com.gumjoe.universalutils.*;
-public class universalutils {
-    public static void main(String[], args) throws GitAPIException
+
+public class universalutils
 {
-        
-    }             
+    public static void main( String[] args ) throws Exception
+    {
+     
+    }
 }
