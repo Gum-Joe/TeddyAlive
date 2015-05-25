@@ -1,6 +1,7 @@
 package com.gumjoe.universalutils;
  
 import junit.framework.Assert;
+import junit.framework.*;
 import org.junit.Test;
 import java.io.*;
  
