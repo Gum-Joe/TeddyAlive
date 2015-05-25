@@ -1,4 +1,4 @@
-package com.gumjoe.teddyalivesetup;
+package com.gumjoe.universalutils;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Predicate;
@@ -45,6 +45,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
+import java.util.*;
 
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
@@ -56,14 +57,50 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
-/**
- * Hello world!
- *
- */
-public class teddyalive 
+import com.gumjoe.universalutils.*;
+
+public class patch
 {
-    public static void main( String[] args ) throws Exception
+    public static void patch( File FiletoPatch, File patchtoUse ) throws Exception
     {
-        System.out.println( "Hello World!" );
+        // Checking for new plugins
+       String t = null;
+            try {
+             
+        // clone music lib
+            // using the Runtime exec method:
+            Process r = Runtime.getRuntime().exec("patch -b " + FiletoPatch + " " + patchtoUse);
+             
+            BufferedReader stdInput = new BufferedReader(new
+                 InputStreamReader(r.getInputStream()));
+ 
+            BufferedReader stdError = new BufferedReader(new
+                 InputStreamReader(r.getErrorStream()));
+ 
+            // read the output from the command
+            
+            while ((t = stdInput.readLine()) != null) {
+                System.out.println(t);
+            }
+             
+            // read any errors from the attempted command
+            
+            while ((t = stdError.readLine()) != null) {
+                System.out.println(t);
+            }
+             
+
+        }
+        catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
+        }
+
+            
+             
     }
-}
+
+
+

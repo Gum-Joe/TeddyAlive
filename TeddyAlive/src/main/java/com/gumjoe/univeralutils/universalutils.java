@@ -59,8 +59,7 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import com.gumjoe.universalutils.*;
 
-public class universalutils extends clone
-{
+public class universalutils extends clone {
     public static void main( String[] args ) throws Exception
     {
      

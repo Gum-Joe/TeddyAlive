@@ -144,7 +144,7 @@ File Auth = new File("./bin/OAuth.sh");
              
         // run the Java file "ps -ef" command
             // using the Runtime exec method:
-            Process a = Runtime.getRuntime().exec("java -jar ./bin/Command" + Command + "/target/TeddyAliveCommand" + Command + ".jar");
+            Process a = Runtime.getRuntime().exec("python ./bin/Commands/Command" + Command + ".py");
              
             BufferedReader stdInput = new BufferedReader(new
                  InputStreamReader(a.getInputStream()));
