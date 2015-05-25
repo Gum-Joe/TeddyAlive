@@ -7,7 +7,7 @@ import java.io.*;
 public class clonetest {
  
 	@Test
-	public void testPrintclone() {
+	public static testPrintclone() {
                 File bin = new File( "./bin" );
 		Assert.assertEquals(universalutils.clone("https://github.com/Gum-Joe/TeddyAlive.git", "master" , bin), "Cloning into ./bin");
  
