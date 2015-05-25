@@ -57,7 +57,7 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
-
+public class clone {
     public static void clone(String url, String branch, File target) throws GitAPIException
 {
         String i = null;
@@ -91,3 +91,4 @@ import org.eclipse.jgit.revwalk.RevCommit;
             System.exit(-1);
         }
     }
+}
