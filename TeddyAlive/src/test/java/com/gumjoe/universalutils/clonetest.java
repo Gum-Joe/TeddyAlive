@@ -9,7 +9,7 @@ public class clonetest {
 	@Test
 	public static testPrintclone() {
                 File bin = new File( "./bin" );
-		Assert.assertEquals(universalutils.clone("https://github.com/Gum-Joe/TeddyAlive.git", "master" , bin), "Cloning into ./bin");
+		assertEquals("Cloning into ./bin", universalutils.clone("https://github.com/Gum-Joe/TeddyAlive.git", "master" , bin));
  
 	}
  
