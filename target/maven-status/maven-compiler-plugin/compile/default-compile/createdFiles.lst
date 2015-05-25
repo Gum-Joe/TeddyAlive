@@ -1,6 +1,7 @@
-com\gumjoe\universalutils\universalutils.class
-com\gumjoe\teddyalive\teddyalive.class
 com\gumjoe\universalutils\patch.class
 com\gumjoe\universalutils\utilsVersion.class
 com\gumjoe\teddyalive\version.class
+com\gumjoe\universalutils\universalutils.class
+com\gumjoe\teddyalive\teddyalive.class
+com\gumjoe\teddyalive\commandRunner.class
 com\gumjoe\universalutils\clone.class

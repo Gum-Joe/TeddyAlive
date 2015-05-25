@@ -59,66 +59,40 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import com.gumjoe.universalutils.*;
 
-public class teddyalive
+public class commandRunner
 {
-    public static void main( String[] args ) throws Exception
+    public static void runCommand( String Command ) throws Exception
     {
-        System.out.println( "Welcome to TeddyAlive" );
-        System.out.println( "Running version: " + version.versionnumber + "-" + version.versiontype + "-" + version.realesetype + " on " + System.getProperty( "os.name" ) );
-        //Starting
-        //loading
-        File bin = new File("./bin");
-        if (!bin.exists()){
-            System.out.println( "TeddyAlive does not exist!" );
-            clone.clone("https://github.com/Gum-Joe/TeddyAlive", "master", bin);
-   
-        }
-        
-        File sdk = new File("./sdk");
-        if (!sdk.exists()){
-            universalutils.clone("https://github.com/Gum-Joe/TeddyAlive", "sdk", sdk);
-        }
-        
-        File musiclib = new File("./libs/beets");
-        if (!musiclib.exists()){
-            universalutils.clone("https://github.com/sampsyo/beets.git", "master", musiclib);
-        }
-        
-        
-        System.out.println( "Downloading/Updateing Files" );
-        System.out.println( "Updating Repo @ https://github.com/Gum-Joe/TeddyAlive.git" );
-        ProcessBuilder pb = new ProcessBuilder("git", "pull", "https://github.com/Gum-Joe/MinecraftServerStarterKit.git");
-        Process p = pb.start();
-        // Checking for new plugins
-        File plugin = new File("./plugins/.");
-        if (plugin.exists()){
-             System.out.println( "Updateing files..." );
-            String t = null;
-            try {
+
+
+String s = null;
+ 
+       //running the command
+ try {
              
-        // clone music lib
+        // run the Java file "ps -ef" command
             // using the Runtime exec method:
-            Process r = Runtime.getRuntime().exec("patch -b ./bin/Commands/CommandHelp.py ./plugins/*/*.patch");
+            Process a = Runtime.getRuntime().exec("python ./bin/Commands/Command" + Command + ".py");
              
             BufferedReader stdInput = new BufferedReader(new
-                 InputStreamReader(r.getInputStream()));
+                 InputStreamReader(a.getInputStream()));
  
             BufferedReader stdError = new BufferedReader(new
-                 InputStreamReader(r.getErrorStream()));
+                 InputStreamReader(a.getErrorStream()));
  
             // read the output from the command
-            
-            while ((t = stdInput.readLine()) != null) {
-                System.out.println(t);
+           
+            while ((s = stdInput.readLine()) != null) {
+                System.out.println(s);
             }
              
             // read any errors from the attempted command
             
-            while ((t = stdError.readLine()) != null) {
-                System.out.println(t);
+            while ((s = stdError.readLine()) != null) {
+                System.out.println(s);
             }
              
-
+            System.exit(0);
         }
         catch (IOException e) {
             System.out.println("exception happened - here's what I know: ");
@@ -126,22 +100,4 @@ public class teddyalive
             System.exit(-1);
         }
         }
-File Auth = new File("./bin/OAuth.sh");
-        if (!Auth.exists()){
-            System.out.println( "Authenticater does not exits" );
-            System.exit(1);
-        }
-        
-        System.out.println( "Hello! To continue, just type you command" );
-        Scanner userInputScanner = new Scanner(System.in);
-        System.out.print("\nEnter it to continue... ");
-        String Command = userInputScanner.nextLine();
-        Process process;
-        commandRunner.runCommand( Command );
-            
-             
-    }
-
-}
-
-
+ }
