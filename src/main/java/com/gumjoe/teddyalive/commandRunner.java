@@ -92,12 +92,13 @@ String s = null;
                 System.out.println(s);
             }
              
-            System.exit(0);
         }
         catch (IOException e) {
             System.out.println("exception happened - here's what I know: ");
             e.printStackTrace();
             System.exit(-1);
         }
+// call back
+prompt.prompt();
         }
  }
