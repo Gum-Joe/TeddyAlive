@@ -64,7 +64,6 @@ public class commandRunner
     public static void runCommand( String Command ) throws Exception
     {
 
-
 String s = null;
  
        //running the command

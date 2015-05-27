@@ -1,4 +1,5 @@
 com\gumjoe\universalutils\patch.class
+com\gumjoe\universalutils\cloneBranch.class
 com\gumjoe\universalutils\utilsVersion.class
 com\gumjoe\teddyalive\version.class
 com\gumjoe\teddyalive\run.class
