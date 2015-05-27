@@ -137,13 +137,7 @@ File Auth = new File("./bin/OAuth.sh");
         System.out.print("\nEnter your command to continue... ");
         String Command = userInputScanner.nextLine();
         Process process;
-        String t = Command;
-        if( t=="Stop" ) {
-           System.out.println("Ok, exiting");
-           System.exit(0);
-         } else {
-commandRunner.runCommand( Command );
-            }
+           commandRunner.runCommand( Command );
              
     }
 
