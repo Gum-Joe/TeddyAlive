@@ -58,6 +58,7 @@ import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import com.gumjoe.universalutils.*;
+import com.gumjoe.universalsetup.*;
 
 public class teddyalive
 {
@@ -70,7 +71,7 @@ public class teddyalive
         File bin = new File("./bin");
         if (!bin.exists()){
             System.out.println( "TeddyAlive does not exist!" );
-           clone.clone( "https://github.com/Gum-Joe/TeddyAlive", bin );
+           setup.setup( "clone", "git", "https://github.com/Gum-Joe/TeddyAlive.git", bin, "null"  );
            
    
         }
