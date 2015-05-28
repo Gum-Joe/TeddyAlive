@@ -25,7 +25,7 @@
          <dependency>
             <groupId>com.gumjoe</groupId>
             <artifactId>Universal-Utils-API</artifactId>
-            <version>0.2-ALPHA-SNAPSHOT</version>
+            <version>0.1-ALPHA-SNAPSHOT</version>
         </dependency>                 
         <dependency>
             <groupId>com.custardsource.dybdob</groupId>
