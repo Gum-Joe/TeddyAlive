@@ -70,7 +70,8 @@ public class teddyalive
         File bin = new File("./bin");
         if (!bin.exists()){
             System.out.println( "TeddyAlive does not exist!" );
-            clone.clone("https://github.com/Gum-Joe/TeddyAlive", bin);
+           clone.clone( "https://github.com/Gum-Joe/TeddyAlive", bin );
+           
    
         }
         
@@ -81,7 +82,7 @@ public class teddyalive
         
         File musiclib = new File("./libs/beets");
         if (!musiclib.exists()){
-            universalutils.clone("https://github.com/sampsyo/beets.git", musiclib);
+            clone.clone( "https://github.com/sampsyo/beets.git", musiclib );
         }
         
         
