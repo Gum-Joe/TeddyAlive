@@ -61,7 +61,7 @@ import com.gumjoe.universalutils.*;
 
 public class clone
 {
-    public static void clone(String url, File target) throws GitAPIException
+    public static clone(String url, File target) throws GitAPIException
 {
      Git.cloneRepository().setURI( url ).setDirectory( target ).call();
     }
