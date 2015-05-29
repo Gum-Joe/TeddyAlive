@@ -69,10 +69,10 @@ public class teddyalive
         //Starting
         //loading
         File bin = new File("./bin");
+        File install = new File("./install");
         if (!bin.exists()){
             System.out.println( "TeddyAlive does not exist!" );
-           setup.setup( "clone", "git", "https://github.com/Gum-Joe/TeddyAlive.git", bin, "null"  );
-           
+           setup.setup( "Teddy Alive", "Get requirements from Github", "com.gumjoe.teddyalive", "com.gumjoe", "Gum-Joe", "1", "2", "clone", "git", "https://github.com/Gum-Joe/TeddyAlive.git", bin, install  );
    
         }
         
@@ -83,7 +83,7 @@ public class teddyalive
         
         File musiclib = new File("./libs/beets");
         if (!musiclib.exists()){
-            clone.clone( "https://github.com/sampsyo/beets.git", musiclib );
+            subSetup.subSetup( "beets", "Get music lib from GitHub", "Teddy Alive", "External Package for Teddy Alive", "sampsyo", "sampsyo", "2", "2", "clone", "git", "https://github.com/sampsyo/beets.git", musiclib, install  );
         }
         
         

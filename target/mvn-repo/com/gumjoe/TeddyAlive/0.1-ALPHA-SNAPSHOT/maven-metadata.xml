@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.gumjoe</groupId>
+  <artifactId>TeddyAlive</artifactId>
+  <version>0.1-ALPHA-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20150529.112315</timestamp>
+      <buildNumber>3</buildNumber>
+    </snapshot>
+    <lastUpdated>20150529112315</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>0.1-ALPHA-20150529.112315-3</value>
+        <updated>20150529112315</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.1-ALPHA-20150529.112315-3</value>
+        <updated>20150529112315</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
