@@ -29,7 +29,7 @@
     <property name="os.name" value="Windows 8.1"/>
     <property name="classworlds.conf" value="c:/Users/hp1/apache-maven-3.3.3/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="c:\Program Files\Java\jdk1.8.0_40\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;c:\Users\hp1\bin;.;C:\Program Files (x86)\Git\local\bin;C:\Program Files (x86)\Git\mingw\bin;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\bin;c:\ProgramData\Oracle\Java\javapath;c:\Program Files (x86)\QuickTime\QTSystem\;c:\Program Files (x86)\Skype\Phone\;&quot;c;C:\Program Files (x86)\Git\program files\apache-maven-3.3.3\bin&quot;;&quot;c;C:\Program Files (x86)\Git\Users\hp1\Desktop\BSKupload\Maven Test\unzip\apache-maven-3.3.3\bin&quot;;&quot;c;C:\Program Files (x86)\Git\Users\hp1\AppData\Local\Code\app-0.1.0&quot;;&quot;C;C:\Program Files (x86)\Git\Users\hp1\Desktop\BSKupload\Jenkins\apache-tomcat-6.0.44\apache-tomcat-6.0.44\bin&quot;;c:\Python34;c:\Users\hp1\apache-maven-3.3.3\bin;c:\Program Files\nodejs\;c:\Users\hp1\AppData\Roaming\npm;."/>
+    <property name="java.library.path" value="c:\Program Files\Java\jdk1.8.0_40\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;c:\Users\hp1\bin;.;C:\Program Files (x86)\Git\local\bin;C:\Program Files (x86)\Git\mingw\bin;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\bin;c:\ProgramData\Oracle\Java\javapath;c:\Program Files (x86)\QuickTime\QTSystem\;c:\Program Files (x86)\Skype\Phone\;&quot;c;C:\Program Files (x86)\Git\program files\apache-maven-3.3.3\bin&quot;;&quot;c;C:\Program Files (x86)\Git\Users\hp1\Desktop\BSKupload\Maven Test\unzip\apache-maven-3.3.3\bin&quot;;&quot;c;C:\Program Files (x86)\Git\Users\hp1\AppData\Local\Code\app-0.1.0&quot;;&quot;C;C:\Program Files (x86)\Git\Users\hp1\Desktop\BSKupload\Jenkins\apache-tomcat-6.0.44\apache-tomcat-6.0.44\bin&quot;;c:\Python34;c:\Users\hp1\apache-maven-3.3.3\bin;c:\Program Files\nodejs\;c:\Users\hp1\AppData\Roaming\npm;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -44,7 +44,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="c:\Program Files\Java\jdk1.8.0_40\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher deploy"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
