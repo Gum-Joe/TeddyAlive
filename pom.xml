@@ -98,6 +98,8 @@
                 <includes><include>**/*</include></includes>
                 <repositoryName>TeddyAlive</repositoryName>      <!-- github repo name -->
                 <repositoryOwner>Gum-Joe</repositoryOwner>    <!-- github username  -->
+		<email>kishansambhi@hotmail.co.uk</email>
+		<name>TeddyAlive</name>
             </configuration>
             <executions>
               <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
