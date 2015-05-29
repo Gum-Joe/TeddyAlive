@@ -16,6 +16,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<github.global.server>github</github.global.server>
     </properties>
+    <repositories>
+    <repository>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+        </snapshots>
+    </repository>
+</repositories>
 
 <distributionManagement>
     <repository>
