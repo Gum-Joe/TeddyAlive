@@ -19,13 +19,8 @@
 
 <distributionManagement>
     <repository>
-        <id>internal.repo</id>
-        <name>Temporary Staging Repository</name>
-        <url>file://${project.build.directory}/mvn-repo</url>
-    </repository>
-    <repository>
-        <id>Github</id>
-        <name>Temporary Staging Repository</name>
+        <id>github</id>
+        <name>Github-REPO</name>
         <url>https://github.com/Gum-Joe/TeddyAlive/tree/mvn-repo</url>
     </repository>
 </distributionManagement>
@@ -96,7 +91,7 @@
         <artifactId>maven-deploy-plugin</artifactId>
         <version>2.8.1</version>
         <configuration>
-            <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+            <altDeploymentRepository>github::default::https://github.com/Gum-Joe/TeddyAlive/tree/mvn-repo</altDeploymentRepository>
         </configuration>
     </plugin>
   
