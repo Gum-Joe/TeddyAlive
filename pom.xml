@@ -18,6 +18,8 @@
     </properties>
     <repositories>
     <repository>
+        <id>github</id>
+        <url>https://raw.github.com/Gum-Joe/Maven-repo/master/</url>
         <snapshots>
             <enabled>true</enabled>
             <updatePolicy>always</updatePolicy>

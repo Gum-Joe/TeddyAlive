@@ -78,6 +78,15 @@
       </plugin>
     </plugins>
   </build>
+  <repositories>
+    <repository>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+      <id>github</id>
+      <url>https://raw.github.com/Gum-Joe/Maven-repo/master/</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>org.projectlombok</groupId>
