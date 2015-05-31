@@ -58,7 +58,7 @@ import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import com.gumjoe.universalutils.*;
-import com.gumjoe.universalsetup.*;
+import com.gumjoe.universalsetupapi.*;
 
 public class teddyalive
 {
@@ -139,6 +139,10 @@ File Auth = new File("./bin/OAuth.sh");
         System.out.print("\nEnter your command to continue... ");
         String Command = userInputScanner.nextLine();
         Process process;
+        if(Command.equals("Stop")){
+            System.out.println("Ok, exiting")
+            System.exit(0)
+        }
            commandRunner.runCommand( Command );
              
     }
