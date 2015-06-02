@@ -9,43 +9,10 @@
     <finalName>${project.name}</finalName>
     <plugins>
       <plugin>
-<<<<<<< HEAD
-        <groupId>com.github.github</groupId>
-        <artifactId>site-maven-plugin</artifactId>
-        <version>0.10</version>
-        <executions>
-          <execution>
-            <phase>deploy</phase>
-            <goals>
-              <goal>site</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <message>Maven artifacts for ${project.version}</message>
-          <noJekyll>true</noJekyll>
-          <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-          <branch>refs/heads/mvn-repo</branch>
-          <includes>
-            <include>**/*</include>
-          </includes>
-          <repositoryName>TeddyAlive</repositoryName>
-          <repositoryOwner>Gum-Joe</repositoryOwner>
-          <email>kishansambhi@hotmail.co.uk</email>
-          <name>TeddyAlive</name>
-        </configuration>
-      </plugin>
-      <plugin>
         <artifactId>maven-deploy-plugin</artifactId>
         <version>2.8.1</version>
         <configuration>
-          <altDeploymentRepository>jitpack.io::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
-=======
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>2.8.1</version>
-        <configuration>
-          <altDeploymentRepository>internal.repo::default::file://c/Users/hp1/Desktop/Projects/mvn-repo</altDeploymentRepository>
->>>>>>> origin/master
+          <altDeploymentRepository>jitpack.io::default::file://C:/Users/hp1/Desktop/Projects/mvn-repo</altDeploymentRepository>
         </configuration>
       </plugin>
       <plugin>
@@ -132,7 +99,7 @@
     <repository>
       <id>internal.repo</id>
       <name>Temporary Staging Repository</name>
-      <url>file://${project.build.directory}/mvn-repo</url>
+      <url>file://C:/Users/hp1/Desktop/Projects/mvn-repo</url>
     </repository>
   </distributionManagement>
   <properties>
