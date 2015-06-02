@@ -58,6 +58,7 @@ import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import com.gumjoe.universalutils.*;
+import com.gumjoe.universalsetupapi.*;
 
 public class teddyalive
 {
@@ -68,10 +69,10 @@ public class teddyalive
         //Starting
         //loading
         File bin = new File("./bin");
+        File install = new File("./install");
         if (!bin.exists()){
             System.out.println( "TeddyAlive does not exist!" );
-           clone.clone( "https://github.com/Gum-Joe/TeddyAlive", bin );
-           
+           setup.setup( "Teddy Alive", "Get requirements from Github", "com.gumjoe.teddyalive", "com.gumjoe", "Gum-Joe", "1", "2", "clone", "git", "https://github.com/Gum-Joe/TeddyAlive.git", bin, install  );
    
         }
         
@@ -82,7 +83,7 @@ public class teddyalive
         
         File musiclib = new File("./libs/beets");
         if (!musiclib.exists()){
-            clone.clone( "https://github.com/sampsyo/beets.git", musiclib );
+            subSetup.subSetup( "beets", "Get music lib from GitHub", "Teddy Alive", "External Package for Teddy Alive", "sampsyo", "sampsyo", "2", "2", "clone", "git", "https://github.com/sampsyo/beets.git", musiclib, install  );
         }
         
         
@@ -138,6 +139,10 @@ File Auth = new File("./bin/OAuth.sh");
         System.out.print("\nEnter your command to continue... ");
         String Command = userInputScanner.nextLine();
         Process process;
+        if(Command.equals("Stop")){
+            System.out.println("Ok, exiting");
+            System.exit(0);
+        }
            commandRunner.runCommand( Command );
              
     }

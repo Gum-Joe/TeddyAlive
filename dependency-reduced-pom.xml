@@ -9,6 +9,7 @@
     <finalName>${project.name}</finalName>
     <plugins>
       <plugin>
+<<<<<<< HEAD
         <groupId>com.github.github</groupId>
         <artifactId>site-maven-plugin</artifactId>
         <version>0.10</version>
@@ -39,6 +40,12 @@
         <version>2.8.1</version>
         <configuration>
           <altDeploymentRepository>jitpack.io::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+=======
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.8.1</version>
+        <configuration>
+          <altDeploymentRepository>internal.repo::default::file://c/Users/hp1/Desktop/Projects/mvn-repo</altDeploymentRepository>
+>>>>>>> origin/master
         </configuration>
       </plugin>
       <plugin>
@@ -104,6 +111,15 @@
       </plugin>
     </plugins>
   </build>
+  <repositories>
+    <repository>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+      <id>github</id>
+      <url>https://raw.github.com/Gum-Joe/Maven-repo/master/</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>org.projectlombok</groupId>

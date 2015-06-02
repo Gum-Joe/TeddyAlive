@@ -1,4 +1,5 @@
 # Teddy Alive [![Build Status](https://travis-ci.org/Gum-Joe/TeddyAlive.svg?branch=master)](https://travis-ci.org/Gum-Joe/TeddyAlive)
+ATTENTION: I am planning to move this over to me and my friends organization ( V-I-P - Very Important Programming)
 The way to make teddies alive
 # How to use
 First, download and run Teddy alive using the following command: `java -jar TeddyAlive.jar` in an empty folder.

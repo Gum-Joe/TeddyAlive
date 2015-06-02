@@ -16,6 +16,24 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<github.global.server>github</github.global.server>
     </properties>
+    <repositories>
+    <repository>
+        <id>github</id>
+        <url>https://raw.github.com/Gum-Joe/Maven-repo/master/</url>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+        </snapshots>
+    </repository>
+</repositories>
+
+<distributionManagement>
+    <repository>
+        <id>internal.repo</id>
+        <name>Temporary Staging Repository</name>
+        <url>file://${project.build.directory}/mvn-repo</url>
+    </repository>
+</distributionManagement>
 
 <distributionManagement>
     <repository>
@@ -86,6 +104,7 @@
     <build>
         <finalName>${project.name}</finalName>
         <plugins>
+<<<<<<< HEAD
          <plugin>
             <groupId>com.github.github</groupId>
             <artifactId>site-maven-plugin</artifactId>
@@ -111,17 +130,27 @@
               </execution>
             </executions>
         </plugin>
+=======
+>>>>>>> origin/master
 
 
 	<plugin>
         <artifactId>maven-deploy-plugin</artifactId>
         <version>2.8.1</version>
         <configuration>
+<<<<<<< HEAD
             <altDeploymentRepository>jitpack.io::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
         </configuration>
     </plugin>
 	
 <plugin>
+=======
+            <altDeploymentRepository>internal.repo::default::file://c/Users/hp1/Desktop/Projects/mvn-repo</altDeploymentRepository>
+        </configuration>
+    </plugin>
+  
+	<plugin>
+>>>>>>> origin/master
                 <groupId>net.md-5</groupId>
                 <artifactId>scriptus</artifactId>
                 <version>0.2</version>
