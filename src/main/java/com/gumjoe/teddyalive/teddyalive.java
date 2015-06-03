@@ -53,6 +53,7 @@ import joptsimple.OptionSpec;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.output.TeeOutputStream;
+import org.apache.commans.*
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
@@ -66,7 +67,28 @@ public class teddyalive
     {
         System.out.println( "Welcome to TeddyAlive" );
         System.out.println( "Running version: " + version.versionnumber + "-" + version.versiontype + "-" + version.realesetype + " on " + System.getProperty( "os.name" ) );
-        //Starting
+        // parser
+        // create Options object
+        Options options = new Options();
+
+// add run option
+options.addOption("r", false, "run");
+
+CommandLineParser parser = new DefaultParser();
+CommandLine cmd = parser.parse( options, args);
+CommandLine sh = parser.parse( options, args);
+CommandLine bash = parser.parse( options, args); 
+if(sh.hasOption("r")) {
+    commandRunner.runCommand( sh );
+}
+if(cmd.hasOption("r")) {
+    commandRunner.runCommand( cmd );
+}
+
+if(bash.hasOption("r")) {
+    commandRunner.runCommand( bash );
+}       
+//Starting
         //loading
         File bin = new File("./bin");
         File install = new File("./install");
@@ -148,5 +170,4 @@ File Auth = new File("./bin/OAuth.sh");
     }
 
 }
-
 
