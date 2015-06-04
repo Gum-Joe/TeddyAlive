@@ -3,7 +3,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.gumjoe</groupId>
+    <groupId>org.vip</groupId>
     <artifactId>TeddyAlive</artifactId>
     <packaging>jar</packaging>
     <version>0.1-ALPHA-SNAPSHOT</version>

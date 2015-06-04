@@ -1,4 +1,4 @@
-com\gumjoe\teddyalive\prompt.class
-com\gumjoe\teddyalive\teddyalive.class
-com\gumjoe\teddyalive\commandRunner.class
-com\gumjoe\teddyalive\version.class
+org\veryimportantprogramming\teddyalive\prompt.class
+org\veryimportantprogramming\teddyalive\commandRunner.class
+org\veryimportantprogramming\teddyalive\teddyalive.class
+org\veryimportantprogramming\teddyalive\version.class
