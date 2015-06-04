@@ -1,4 +1,4 @@
-package com.gumjoe.teddyalive;
+package org.veryimportantprogramming.teddyalive;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Predicate;
@@ -57,8 +57,8 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
-import com.gumjoe.universalutils.*;
-import com.gumjoe.teddyalive.*;
+import org.veryimportantprogramming.universalutils.*;
+import org.veryimportantprogramming.teddyalive.*;
 
 public class prompt
 {

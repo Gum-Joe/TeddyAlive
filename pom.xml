@@ -142,7 +142,7 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Main-Class>com.gumjoe.teddyalive.teddyalive</Main-Class>
+                            <Main-Class>org.veryimportantprogramming.teddyalive.teddyalive</Main-Class>
                             <Implementation-Version>${describe}</Implementation-Version>
                         </manifestEntries>
                     </archive>
