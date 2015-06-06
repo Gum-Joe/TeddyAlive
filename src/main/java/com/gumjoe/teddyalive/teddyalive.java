@@ -63,6 +63,9 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 import org.apache.commons.cli.UnrecognizedOptionException;
+import org.apache.commons.cli.Parser;
+import org.apache.commons.cli.BasicParser;
+import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.output.TeeOutputStream;
 import org.eclipse.jgit.api.Git;
@@ -87,25 +90,13 @@ public class teddyalive
 options.addOption("r", false, "run");
 
 CommandLineParser parser = new DefaultParser();
-CommandLine cmd = parser.parse( options, args);
-CommandLine sh = parser.parse( options, args);
-CommandLine bash = parser.parse( options, args); 
+CommandLine sh = parser.parse( options, args); 
 if(sh.hasOption("r")) {
     System.out.println( "You've used the -r <command> argument, running the command" );
-    String rsh = sh;
-    commandRunner.runCommand( rsh );
-}
-if(cmd.hasOption("r")) {
-    System.out.println( "You've used the -r <command> argument, running the command" );
-    String rcmd = cmd;
-    commandRunner.runCommand( rcmd );
-}
-
-if(bash.hasOption("r")) {
-    System.out.println( "You've used the -r <command> argument, running the command" );
-    String rbash = bash;
-    commandRunner.runCommand( rbash );
-}       
+    String[] rsh = sh.getOptionValues("r");
+    commandRunner.runP( rsh );
+    System.exit(0);
+}      
         File bin = new File("./bin");
         File install = new File("./install");
         if (!bin.exists()){
