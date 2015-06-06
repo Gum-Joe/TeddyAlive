@@ -45,12 +45,12 @@
     </dependency>
 
     <dependency>
-            <groupId>com.gumjoe</groupId>
+            <groupId>org.vip</groupId>
             <artifactId>Universal-Setup-API</artifactId>
             <version>0.1-ALPHA-SNAPSHOT</version>
         </dependency>
          <dependency>
-            <groupId>com.gumjoe</groupId>
+            <groupId>org.vip</groupId>
             <artifactId>Universal-Utils-API</artifactId>
             <version>0.1-ALPHA-SNAPSHOT</version>
         </dependency>                 
