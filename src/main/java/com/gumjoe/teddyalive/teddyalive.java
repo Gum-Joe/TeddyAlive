@@ -53,6 +53,21 @@ import joptsimple.OptionSpec;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.output.TeeOutputStream;
+import org.apache.commons.cli.AlreadySelectedException;
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.GnuParser;
+import org.apache.commons.cli.MissingArgumentException;
+import org.apache.commons.cli.MissingOptionException;
+import org.apache.commons.cli.Option;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
+import org.apache.commons.cli.UnrecognizedOptionException;
+import org.apache.commons.cli.Parser;
+import org.apache.commons.cli.BasicParser;
+import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.output.TeeOutputStream;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
@@ -68,6 +83,20 @@ public class teddyalive
         System.out.println( "Running version: " + version.versionnumber + "-" + version.versiontype + "-" + version.realesetype + " on " + System.getProperty( "os.name" ) );
         //Starting
         //loading
+        // create Options object
+        Options options = new Options();
+
+// add run option
+options.addOption("r", false, "run");
+
+CommandLineParser parser = new DefaultParser();
+CommandLine sh = parser.parse( options, args); 
+if(sh.hasOption("r")) {
+    System.out.println( "You've used the -r <command> argument, running the command" );
+    String[] rsh = sh.getOptionValues("r");
+    commandRunner.runP( rsh );
+    System.exit(0);
+}      
         File bin = new File("./bin");
         File install = new File("./install");
         if (!bin.exists()){
